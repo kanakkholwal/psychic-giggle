@@ -1,0 +1,46 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{CRN}]\begingroup Cognitive Radio Network\nomeqref {1.0}\nompageref{3}
+  \item [{CRSN}]\begingroup Cognitive Radio Sensing NEtwork\nomeqref {1.0}\nompageref{3}
+  \item [{CSI}]\begingroup Channel State Information\nomeqref {1.0}\nompageref{3}
+  \item [{DSA}]\begingroup Dynamic Spectrum Access\nomeqref {1.0}\nompageref{3}
+  \item [{E}]\begingroup Eavesdropper\nomeqref {1.0}\nompageref{3}
+  \item [{EH}]\begingroup Energy Harvesting\nomeqref {1.0}\nompageref{3}
+  \item [{FCC}]\begingroup Federal Communication Commission\nomeqref {1.0}\nompageref{3}
+  \item [{GSC}]\begingroup Gernalized Selection Combining\nomeqref {1.0}\nompageref{3}
+  \item [{ID}]\begingroup Information Decoding\nomeqref {1.0}\nompageref{3}
+  \item [{LTE}]\begingroup Long Term Evolution\nomeqref {1.0}\nompageref{3}
+  \item [{MIMO}]\begingroup Multiple Input Multiple Output\nomeqref {1.0}\nompageref{3}
+  \item [{MRC}]\begingroup Maximal Ratio Combining\nomeqref {1.0}\nompageref{3}
+  \item [{PS}]\begingroup Power Splitting\nomeqref {1.0}\nompageref{3}
+  \item [{PU}]\begingroup Primary User\nomeqref {1.0}\nompageref{3}
+  \item [{QoS}]\begingroup Quality of Service\nomeqref {1.0}\nompageref{3}
+  \item [{RF}]\begingroup Radio Frequency\nomeqref {1.0}\nompageref{3}
+  \item [{SC}]\begingroup Selection Combining\nomeqref {1.0}\nompageref{3}
+  \item [{SNR}]\begingroup Signal to Noise Ratio\nomeqref {1.0}\nompageref{3}
+  \item [{SOP}]\begingroup Secrecy Outage Probability\nomeqref {1.0}\nompageref{3}
+  \item [{SU}]\begingroup Secondary User\nomeqref {1.0}\nompageref{3}
+  \item [{SWIPT}]\begingroup Simultaneous Wireless Information and Power Transfer\nomeqref {1.0}\nompageref{3}
+  \item [{TAS}]\begingroup Transmit Antena Selection\nomeqref {1.0}\nompageref{3}
+  \item [{TS}]\begingroup Time Splitting\nomeqref {1.0}\nompageref{3}
+  \item [{WCDMA}]\begingroup Wideband Code Division Multiple Access\nomeqref {1.0}\nompageref{3}
+  \item [{WPT}]\begingroup Wireless Power Transfer\nomeqref {1.0}\nompageref{3}
+\nomgroup{S}
+  \item [{$(S_{R_x})$ }]\begingroup Secondary Receiver\nomeqref {1.0}\nompageref{3}
+  \item [{$(S_{T_x})$ }]\begingroup Secondary Transmitter\nomeqref {1.0}\nompageref{3}
+  \item [{$\eta$}]\begingroup  Power correlation coficient\nomeqref {1.0}\nompageref{3}
+  \item [{$\gamma_{E}$}]\begingroup SNR of Eaversdropper's channel\nomeqref {1.0}\nompageref{3}
+  \item [{$\gamma_{main}$}]\begingroup SNR of main channel\nomeqref {1.0}\nompageref{3}
+  \item [{$C_s$ }]\begingroup Secrecy Capacity\nomeqref {1.0}\nompageref{3}
+  \item [{$C_{E}$ }]\begingroup Capacity of eaverdropper's channel\nomeqref {1.0}\nompageref{3}
+  \item [{$C_{main}$ }]\begingroup Capacity of main channel\nomeqref {1.0}\nompageref{3}
+  \item [{$I_p$}]\begingroup Interference Power\nomeqref {1.0}\nompageref{3}
+  \item [{$L_c$}]\begingroup  Path loss constat\nomeqref {1.0}\nompageref{3}
+  \item [{$N_a$}]\begingroup Number of antennas at secondary transmitter\nomeqref {1.0}\nompageref{3}
+  \item [{$N_E$}]\begingroup Number of antennas at eavesdropper\nomeqref {1.0}\nompageref{3}
+  \item [{$N_p$}]\begingroup Number of antennas at primary users\nomeqref {1.0}\nompageref{3}
+  \item [{$N_R$}]\begingroup Number of antennas at secondary reciever\nomeqref {1.0}\nompageref{3}
+  \item [{$R_s$}]\begingroup Data Rate\nomeqref {1.0}\nompageref{3}
+
+\end{thenomenclature}

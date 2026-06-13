@@ -1,0 +1,331 @@
+\documentclass[12pt,a4paper,timesnewroman,twoside,openright]{report}
+
+%\usepackage{polyglossia}
+%\setdefaultlanguage{english}
+%\setotherlanguage{hindi}
+%\usepackage{fontspec}
+%\newfontfamily\devanagarifont{}
+%\usepackage[T1]{fontenc}
+% \usepackage[backend=biber]{biblatex}
+% \addbibresource{References.bib}
+\usepackage{titlesec}
+\titleformat
+{\chapter} % command
+[display] % shape
+{\normalfont \bfseries \Huge \setstretch{1}} % format
+{\itshape \chaptertitlename\  \thechapter} % label
+{0.5ex} % sep
+{
+	%\rule{\textwidth}{1pt}
+	\vspace{2.5ex}
+	%\centering
+} % before-code
+[
+\vspace{-1ex}%
+%\rule{\textwidth}{0.3pt}
+] % after-code
+
+
+\titleformat{\section}[hang]{\normalfont \LARGE \bfseries \setstretch{1}}{\thesection.}{0.5em}{}
+
+\titlespacing{\section}{0.5ex}{5ex}{-0.5ex}
+
+\titleformat{\subsection}[hang]{\normalfont \large \bfseries \setstretch{1}}{\thesubsection.}{0.5em}{}
+
+\titlespacing{\subsection}{0.9ex}{5ex}{-0.5ex}
+
+\titleformat{\subsubsection}[hang]{\normalfont \normalsize \bfseries \setstretch{1}}{\thesubsubsection.}{0.5em}{}
+
+\titlespacing{\subsubsection}{1.3ex}{5ex}{-0.5ex}
+
+\newcommand{\changelocaltocdepth}[1]{%
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{#1}}%
+	\setcounter{tocdepth}{#1}%
+}
+\usepackage{longtable}
+\usepackage{caption}
+\DeclareCaptionFont{mysize}{\fontsize{11}{15}\selectfont}
+\captionsetup{font=mysize}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\usepackage{amsmath,amsfonts}
+\usepackage{lscape}
+\usepackage{cite}
+\usepackage{afterpage}
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
+
+\usepackage{setspace}	% for line spacing
+\usepackage{graphicx,subfig,tikz}
+\usetikzlibrary{arrows}
+\usepackage{pdflscape}
+\usepackage{tcolorbox}
+%\usepackage{epstopdf}
+\usepackage{multirow}
+\usepackage{paralist}
+\usepackage{float}
+\usepackage{secdot}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+\usepackage{enumitem}
+
+\newcommand{\frontSign}[2]{%
+    \begin{minipage}[t]{.3\textwidth}
+        \centering
+        \dotfill\\
+        #1\\
+        #2
+    \end{minipage}%
+    }
+\usepackage{rotating}
+\usepackage [autostyle, english = british]{csquotes}
+\MakeOuterQuote{"}
+
+\usepackage{titlesec}
+
+\titleformat{\chapter}[display]
+  {\filleft\bfseries\large}
+  {\itshape\chaptername\ \thechapter}
+  {-1em}
+  {\bfseries\Huge}
+\titlespacing*{\chapter}
+  {0pt}
+  {-1em}
+  {1pt}
+
+  
+\usepackage{pdfpages}
+% \usepackage[margin=1in]{geometry}
+% \usepackage{lipsum}
+% \newcommand\signature[3]{% Name; Department
+% \noindent\begin{minipage}{4cm}
+%     \noindent\vspace{3cm}\par
+%     \noindent\rule{4cm}{1pt}\par
+%     % \noindent\textbf{#1}\par
+%     % \noindent#2%
+% \end{minipage}}
+% \newcommand\insertdate[1][\today]{\vfill\begin{flushright}#1\end{flushright}}
+
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage[labelfont=bf]{caption}
+\usepackage[title,toc,page]{appendix}
+\usepackage{emptypage}
+
+\usepackage{IEEEtrantools}
+\usepackage[top=25mm, bottom=25mm, right=25mm, left=38mm]{geometry}
+\usepackage{color}
+\definecolor{nithred}{rgb}{0.5,0,0}
+\definecolor{nithblue}{rgb}{0,0,0.5}
+\definecolor{nithdarkred}{rgb}{0.2,0,0}
+\definecolor{nithdarkblue}{rgb}{0,0,0.2}
+\definecolor{nithgreen}{rgb}{0,0.2,0}
+\usepackage[intoc]{nomencl}
+\makenomenclature
+%% This rename the main title:
+\renewcommand{\nomname}{List of Abbreviations and Symbols}
+%% this modifies item separation:
+\setlength{\nomitemsep}{8pt}
+%% this part defines the groups:
+%----------------------------------------------
+\RequirePackage{ifthen}
+\renewcommand{\nomgroup}[1]{%
+	\ifthenelse{\equal{#1}{A}}{\item[\Large\textbf{List of Abbreviations}]}
+	\newpage {%
+		\ifthenelse{\equal{#1}{S}}{\hspace{2cm}\item[\Large\textbf{List of Symbols}]}{}}}
+%----------------------------------------------
+% this line must be used in built command if using texstudio otherwise in terminal
+%makeindex report.nlo -s nomencl.ist -o report.nls
+
+%% for watermark %%
+\usepackage{eso-pic}
+\newcommand\BackgroundPic{
+	\put(13,0){
+		\parbox[b][\paperheight]{\paperwidth}{%
+			\vfill
+			\centering
+			\includegraphics[width=0.6\paperwidth,height=0.6\paperheight,
+			keepaspectratio]{Initial_Pages/logo/nithwatermark.jpg}%
+			\vfill
+}}}
+
+%%% Add this %%%
+%\usepackage{titlesec}
+%\titleformat{\chapter}[display]
+%{\normalfont\huge\bfseries}{\chaptertitlename~\thechapter}{20pt}{\Huge}
+%\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+%\titlespacing*{name=\chapter,numberless}{0pt}{-30pt}{10pt}
+%%%   End   %%%
+%%%%%%%%%%%%
+\newcommand{\insertchapterspace}{%
+	\addtocontents{lof}{\protect\addvspace{10pt}}%
+	\addtocontents{lot}{\protect\addvspace{10pt}}%
+}
+
+% fancy header
+%%\usepackage{fancyhdr}
+%\fancyhead[RE]{\bf \nouppercase{\rightmark}}
+%\fancyhead[LO]{\bf \nouppercase{\leftmark}}
+%\fancyhead[RO]{\thepage}
+%\fancyhead[LE]{\thepage}
+%\fancyfoot{}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+\newcommand{\figurewidth}{0.85\textwidth}
+\newcommand{\figureheight}{0.35\textheight}
+
+\DeclareRobustCommand{\ig}{\lowercase{ig}}
+\DeclareRobustCommand{\IG}{\uppercase{IG}}
+\usepackage{titletoc}
+\titlecontents{chapter}
+[0pt]% <left>
+{\bfseries}% <above-code>
+{\chaptername\ \thecontentslabel:\quad}% <numbered-entry-format>
+{}% <numberless-entry-format>
+{\titlerule*[0.8pc]{.}\contentspage}
+%\usepackage{tocloft}
+%\renewcommand{\cftfigfont}{Figure }
+%\renewcommand{\cfttabfont}{Table }
+%\titleformat{\chapter}[display]
+%{\normalfont\huge \bfseries}{\chaptertitlename\ \thechapter}{5pt}{\Huge}
+%{\normalfont \huge \filleft \bfseries\color{black}}{\chaptertitlename\ \thechapter}{8pt}{\LARGE}
+%\titlespacing*{\chapter}{0pt}{0pt}{0pt}
+%\graphicspath{{./Figures/}}
+%\renewcommand\cftaftertoctitle{\par\noindent\rule{\textwidth}{2pt}\par\vskip-3.5em}
+%\renewcommand\cftafterloftitle{\par\noindent\rule{\textwidth}{2pt}\par\vskip-3.0em}
+%\renewcommand\cftafterlottitle{\par\noindent\rule{\textwidth}{2pt}\par\vskip-3.0em}
+%\renewcommand\refname{\par\noindent\rule{\textwidth}{2pt}\par\vskip-3.0em}
+%\usepackage[colorlinks=true,citecolor=black,linkcolor=black]{hyperref}
+\begin{document}
+	
+	\pagestyle{empty}
+	\include{Initial_Pages/coverpage}
+	\include{Initial_Pages/blankpage}
+	
+	\include{Initial_Pages/titlepage}
+	\include{Initial_Pages/blankpage}
+	
+	\include{Initial_Pages/title_back}
+	\include{Initial_Pages/blankpage}
+	
+%	\AddToShipoutPicture{\BackgroundPic}  %watermark start
+% 	\include{Initial_Pages/certificate}
+    \newpage
+    \includepdf[pages={1}]{Initial_Pages/certificate.pdf}
+	%\ClearShipoutPicture % watermark end
+	%\include{Initial_Pages/certificate_back}
+	
+%	\include{Initial_Pages/copyright}
+	\include{Initial_Pages/blankpage}
+	
+	%\include{Initial_Pages/shloka}
+	%\include{Initial_Pages/blankpage}
+	
+	\pagestyle{plain}
+	\pagenumbering{roman}
+	
+	\setstretch{1.5}
+%	\doublespacing
+	
+	\addcontentsline{toc}{chapter}{Acknowledgment}
+	\include{Initial_Pages/ackno}
+%	stoftables
+% 	\addcontentsline{toc}{chapter}{Abstract}
+% 	\include{Initial_Pages/abstract}
+	
+	\tableofcontents
+
+
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures
+	
+	
+	\addcontentsline{toc}{chapter}{List of Tables}
+	\listoftables
+	
+	\printnomenclature[3.5cm]
+	\include{Initial_Pages/blankpage}
+%	% % % % % % %
+	
+%	\pagestyle{fancy}
+	\pagenumbering{arabic}
+	
+
+ %chapter 1
+\setstretch{1.5}
+\include{chapters/chapter1}
+% \include{Initial_Pages/blankpage}
+
+ %chapter 2
+\include{chapters/chapter2}
+% \include{Initial_Pages/blankpage}
+
+% chapter 3
+\include{chapters/chapter3}
+% \include{Initial_Pages/blankpage}
+
+% chapter 4
+\include{chapters/chapter4}
+% \include{Initial_Pages/blankpage}
+
+% chapter 5
+\include{chapters/chapter5}
+% \include{Initial_Pages/blankpage}
+
+\newpage
+\pagestyle{plain}
+\singlespacing
+\chapter*{Author's Contribution} 
+\noindent\rule{\linewidth}{2pt}
+
+\begin{itemize}
+    \item [{[1]}] Srivastava, A., Kumar, A. and Jaiswal A.(2023). Ocular Disease Classification using OCT Scans and Deep Learning: CNN and Autoencoders.  Expert Systems With Applications. (Communicated)
+\end{itemize}
+
+\addcontentsline{toc}{chapter}{Author's Contibution}
+
+%\appendix
+%\include{Chapters/appendix/appendix}
+
+\include{Initial_Pages/blankpage}
+\pagestyle{plain}
+
+% \chapter*{Bibliography} 
+% \noindent\rule{\linewidth}{2pt}
+
+% \addcontentsline{toc}{chapter}{Bibliography}
+% \singlespacing
+% \printbibliography[heading=none]
+
+
+
+
+
+
+%\addcontentsline{toc}{chapter}{List of publications}
+%\include{Chapters/publications/publications}
+\singlespacing
+\bibliographystyle{IEEEtran}
+\renewcommand{\bibname}{References}
+% \noindent\rule{\linewidth}{2pt}
+\addcontentsline{toc}{chapter}{References}
+\bibliography{References}
+% \noindent\rule{\linewidth}{2pt}
+
+% \newpage
+% \includepdf[pages={1}]{Initial_Pages/similarity.pdf}
+
+% \newpage
+% \includepdf[pages={1}]{plag_report_lib.pdf}
+
+%$$
+%--\times --\times --\times --
+%$$
+\end{document}

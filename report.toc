@@ -1,0 +1,82 @@
+\contentsline {chapter}{Acknowledgment}{i}{}%
+\contentsline {chapter}{Abstract}{iii}{}%
+\contentsline {chapter}{List of Figures}{ix}{}%
+\contentsline {chapter}{List of Tables}{xii}{}%
+\contentsline {chapter}{\nonumberline List of Abbreviations and Symbols}{xv}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{}%
+\contentsline {section}{\numberline {1.1}Cognitive Radio Technology}{2}{}%
+\contentsline {section}{\numberline {1.2}Functions of Cognitive Radio Network}{5}{}%
+\contentsline {section}{\numberline {1.3}Applications of Cognitive Radio Networks}{8}{}%
+\contentsline {section}{\numberline {1.4} Security in Cognitive Radio Networks}{10}{}%
+\contentsline {section}{\numberline {1.5}Issues in Wiretap Design }{11}{}%
+\contentsline {section}{\numberline {1.6} Cognitive Radio Network with Energy Harvesting}{13}{}%
+\contentsline {section}{\numberline {1.7}Motivation}{14}{}%
+\contentsline {section}{\numberline {1.8} Objectives of the Thesis}{15}{}%
+\contentsline {section}{\numberline {1.9}Thesis Organization}{16}{}%
+\contentsline {section}{\numberline {1.10}Summary}{17}{}%
+\contentsline {chapter}{\numberline {2}Literature Review}{19}{}%
+\contentsline {section}{\numberline {2.1}Physical Layer Security}{20}{}%
+\contentsline {subsection}{\numberline {2.1.1}Secrecy Performance Matrices}{23}{}%
+\contentsline {subsection}{\numberline {2.1.2}Ergodic Secrecy Capacity}{23}{}%
+\contentsline {subsection}{\numberline {2.1.3}Secrecy Outage Probability}{24}{}%
+\contentsline {subsection}{\numberline {2.1.4}Diversity Combining Technique}{28}{}%
+\contentsline {subsection}{\numberline {2.1.5}Secrecy Performance with Imperfect Channel State Information}{32}{}%
+\contentsline {section}{\numberline {2.2}Energy Harvesting in Cognitive Radio Networks}{37}{}%
+\contentsline {subsection}{\numberline {2.2.1}Simultaneous Wireless Information and Power Transfer}{38}{}%
+\contentsline {subsection}{\numberline {2.2.2}SWIPT with Imperfect CSI}{43}{}%
+\contentsline {section}{\numberline {2.3}Summary}{45}{}%
+\contentsline {chapter}{\numberline {3}Secrecy Performance of Perfect/ Imperfect Channel State Information}{47}{}%
+\contentsline {section}{\numberline {3.1}System Model}{49}{}%
+\contentsline {subsection}{\numberline {3.1.1} System parameters for first Scenario}{49}{}%
+\contentsline {subsection}{\numberline {3.1.2}System parameters for Second Scenario}{50}{}%
+\contentsline {subsection}{\numberline {3.1.3}Maximal Ratio Combining for Perfect CSI }{52}{}%
+\contentsline {subsection}{\numberline {3.1.4}Maximal Ratio Combining for Outdated CSI }{52}{}%
+\contentsline {subsection}{\numberline {3.1.5}Selection Combining for Perfect CSI}{53}{}%
+\contentsline {subsection}{\numberline {3.1.6}Selection Combining for Outdated CSI}{53}{}%
+\contentsline {section}{\numberline {3.2}Secrecy Outage Probability}{54}{}%
+\contentsline {section}{\numberline {3.3}Intercept Probability}{54}{}%
+\contentsline {subsection}{\numberline {3.3.1}Intercept Probability for Scenario I}{55}{}%
+\contentsline {subsection}{\numberline {3.3.2}Intercept Probability for Scenario II}{55}{}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Intercept Probability for MRC/MRC scheme}{55}{}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}Intercept Probability for MRC/SC scheme}{55}{}%
+\contentsline {subsection}{\numberline {3.3.3}Exact Secrecy Outage Probability for Scenario I}{55}{}%
+\contentsline {subsection}{\numberline {3.3.4}Exact Secrecy Outage Probability for Scenario II}{56}{}%
+\contentsline {section}{\numberline {3.4}Transmit Antenna Selection}{57}{}%
+\contentsline {section}{\numberline {3.5}Asymptotic Secrecy Outage Probability}{57}{}%
+\contentsline {section}{\numberline {3.6}Performance Evaluation}{59}{}%
+\contentsline {subsection}{\numberline {3.6.1}Discussion for Scenario I}{59}{}%
+\contentsline {subsection}{\numberline {3.6.2}Discussion for Scenario II}{60}{}%
+\contentsline {section}{\numberline {3.7}Summary}{64}{}%
+\contentsline {chapter}{\numberline {4}Secrecy Analysis of Energy Harvesting Underlay Cognitive Radio Networks}{65}{}%
+\contentsline {section}{\numberline {4.1}System Model}{66}{}%
+\contentsline {section}{\numberline {4.2}Secrecy Outage Probability}{68}{}%
+\contentsline {section}{\numberline {4.3}Asymptotic Secrecy Outage Probability}{70}{}%
+\contentsline {subsection}{\numberline {4.3.1}Criteria for Optimal Value for $\rho $}{72}{}%
+\contentsline {section}{\numberline {4.4}Numerical Analysis}{73}{}%
+\contentsline {section}{\numberline {4.5}Summary}{75}{}%
+\contentsline {chapter}{\numberline {5}Secrecy Analysis of Underlay Cognitive Radio Networks with SWIPT and Imperfect CSI}{79}{}%
+\contentsline {section}{\numberline {5.1}Contribution}{80}{}%
+\contentsline {section}{\numberline {5.2}System Model}{80}{}%
+\contentsline {section}{\numberline {5.3}Secrecy Outage Probability}{83}{}%
+\contentsline {subsection}{\numberline {5.3.1}Antenna Selection Scheme}{85}{}%
+\contentsline {subsection}{\numberline {5.3.2}Intercept Probability}{85}{}%
+\contentsline {section}{\numberline {5.4}Asymptotic Secrecy Outage Probability}{86}{}%
+\contentsline {section}{\numberline {5.5}Performance Evaluation}{87}{}%
+\contentsline {section}{\numberline {5.6}Summary}{91}{}%
+\contentsline {chapter}{\numberline {6}Comparative Analysis of Optimal Antenna Selection and Sub-Optimal Antenna Selection Scheme}{93}{}%
+\contentsline {section}{\numberline {6.1}System Model}{94}{}%
+\contentsline {subsection}{\numberline {6.1.1}Power Constraint}{95}{}%
+\contentsline {subsection}{\numberline {6.1.2}Sub-Optimal Antenna Selection Scheme}{97}{}%
+\contentsline {subsection}{\numberline {6.1.3}Optimal Antenna Selection Scheme}{97}{}%
+\contentsline {subsection}{\numberline {6.1.4}The Maximal Ratio Combining Scheme}{98}{}%
+\contentsline {subsection}{\numberline {6.1.5}The Selection Combining Scheme}{98}{}%
+\contentsline {section}{\numberline {6.2}Secrecy Outage Probability}{99}{}%
+\contentsline {section}{\numberline {6.3}Asymptotic Secrecy Outage Probability}{99}{}%
+\contentsline {subsubsection}{\numberline {6.3.0.1}SOP for MRC at main channel and MRC at $E$'s Channel: }{100}{}%
+\contentsline {section}{\numberline {6.4}Intercept Probability}{105}{}%
+\contentsline {section}{\numberline {6.5}Numerical Results}{107}{}%
+\contentsline {section}{\numberline {6.6}Summary}{111}{}%
+\contentsline {chapter}{\numberline {7}Conclusions and Future Work}{113}{}%
+\contentsline {section}{\numberline {7.1}Future Work}{115}{}%
+\contentsline {chapter}{References}{117}{}%
+\contentsfinish 

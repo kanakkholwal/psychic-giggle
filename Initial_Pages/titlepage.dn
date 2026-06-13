@@ -1,0 +1,54 @@
+\thispagestyle{empty}
+\definecolor{nithred}{rgb}{0.5,0,0}
+\definecolor{nithblue}{rgb}{0,0,0.5}
+\definecolor{nithdarkblue}{rgb}{0,0,0.2}
+\definecolor{nithgreen}{rgb}{0,0.2,0}
+\begin{center}
+%
+\textcolor {nithred}{
+{\LARGE \sc{\fontfamily{phv}\selectfont 
+\textbf{Design and Performance Analysis of LDPC Codes in Different Wireless Scenario}}}}\\
+\vfill
+%
+\fontfamily{phv}\selectfont{
+%
+\textcolor {nithdarkblue}{
+\large{\emph{{A \\Dissertation}\\
+submitted in partial fulfillment of the\\
+requirements for the award of the degree\\
+of}}
+\\
+\vfill
+\textcolor {nithblue}{
+\textbf{Master of Technology}}\\
+\textcolor {nithdarkblue}{
+\emph{in}}\\
+\textcolor {nithblue}{
+ELECTRONICS \& COMMUNICATION ENGINEERING\\
+\textbf{(Communication Systems \& Networks)}}\\
+\vfill
+\textcolor {nithdarkblue}{
+\emph{by}}}\\
+\textcolor {nithgreen}{
+{\Large \bf{Ashish~Goswami}}\\
+\large{(09M440)}}\\
+\vfill
+
+\begin{figure}[h]
+\centering
+\includegraphics[height=4cm]{nithlogored.jpg}
+\end{figure}
+\textcolor {nithred}{
+\textbf{
+{\large{\dn ilek.tr~oniksa evaM saMcAra aBiyaMtrikI viBAga}}\\%A.nvikIya
+{\large{\dn rA.s.trIya prOdyogikI saMsTAna}}\\
+{\large{\dn hamIrapura}~-~{\dn 177005} {\dn (hi..pra..), BArata}}\\
+}}
+\textcolor {nithblue}{
+\large{Department of Electronics \& Communication Engineering\\
+National~Institute~of~Technology\\
+Hamirpur-177005~(HP),~INDIA}}\\
+\textcolor {nithdarkblue}{July,~2011}\\
+
+}
+\end{center}

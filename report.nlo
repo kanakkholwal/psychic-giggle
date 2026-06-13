@@ -1,0 +1,40 @@
+\nomenclatureentry{ACRN@[{CRN}]\begingroup Cognitive Radio Network\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ASU@[{SU}]\begingroup Secondary User\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{APU@[{PU}]\begingroup Primary User\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AE@[{E}]\begingroup Eavesdropper\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ATAS@[{TAS}]\begingroup Transmit Antena Selection\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AEH@[{EH}]\begingroup Energy Harvesting\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ATS@[{TS}]\begingroup Time Splitting\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{APS@[{PS}]\begingroup Power Splitting\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AID@[{ID}]\begingroup Information Decoding\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ASWIPT@[{SWIPT}]\begingroup Simultaneous Wireless Information and Power Transfer\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ASOP@[{SOP}]\begingroup Secrecy Outage Probability\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ACSI@[{CSI}]\begingroup Channel State Information\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ARF@[{RF}]\begingroup Radio Frequency\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AWPT@[{WPT}]\begingroup Wireless Power Transfer\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AMIMO@[{MIMO}]\begingroup Multiple Input Multiple Output\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ACRSN@[{CRSN}]\begingroup Cognitive Radio Sensing NEtwork\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ALTE@[{LTE}]\begingroup Long Term Evolution\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AWCDMA@[{WCDMA}]\begingroup Wideband Code Division Multiple Access\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ASNR@[{SNR}]\begingroup Signal to Noise Ratio\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AGSC@[{GSC}]\begingroup Gernalized Selection Combining\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AQoS@[{QoS}]\begingroup Quality of Service\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AFCC@[{FCC}]\begingroup Federal Communication Commission\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ADSA@[{DSA}]\begingroup Dynamic Spectrum Access\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{AMRC@[{MRC}]\begingroup Maximal Ratio Combining\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{ASC@[{SC}]\begingroup Selection Combining\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$(S_{T_x})$ @[{$(S_{T_x})$ }]\begingroup Secondary Transmitter\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$(S_{R_x})$ @[{$(S_{R_x})$ }]\begingroup Secondary Receiver\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$C_s$ @[{$C_s$ }]\begingroup Secrecy Capacity\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$C_{main}$ @[{$C_{main}$ }]\begingroup Capacity of main channel\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$C_{E}$ @[{$C_{E}$ }]\begingroup Capacity of eaverdropper's channel\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$R_s$@[{$R_s$}]\begingroup Data Rate\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$\gamma_{main}$@[{$\gamma_{main}$}]\begingroup SNR of main channel\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$N_p$@[{$N_p$}]\begingroup Number of antennas at primary users\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$N_R$@[{$N_R$}]\begingroup Number of antennas at secondary reciever\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$N_a$@[{$N_a$}]\begingroup Number of antennas at secondary transmitter\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$N_E$@[{$N_E$}]\begingroup Number of antennas at eavesdropper\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$I_p$@[{$I_p$}]\begingroup Interference Power\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$\eta$@[{$\eta$}]\begingroup  Power correlation coficient\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$L_c$@[{$L_c$}]\begingroup  Path loss constat\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{S$\gamma_{E}$@[{$\gamma_{E}$}]\begingroup SNR of Eaversdropper's channel\nomeqref {1.0}|nompageref}{1}

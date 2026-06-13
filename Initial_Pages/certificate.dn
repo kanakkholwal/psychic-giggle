@@ -1,0 +1,90 @@
+\thispagestyle{empty}
+\definecolor{nithred}{rgb}{0.5,0,0}
+\definecolor{nithblue}{rgb}{0,0,0.5}
+\definecolor{nithdarkblue}{rgb}{0,0,0.2}
+
+\begin{minipage}{2.5cm}
+\begin{flushleft}
+\hspace{-0.6cm}
+\includegraphics[width=2.5cm]{nithlogored.jpg}
+\end{flushleft}
+\end{minipage}
+\hspace{-1cm}
+\begin{minipage}{13cm}
+\begin{flushright}
+\centering
+\textcolor {nithred}{
+{\Large{\dn ilek.tr~oniksa evaM saMcAra aBiyaMtrikI viBAga}}}\\%A.nvikIya
+\textcolor {nithblue}{ {\Large{\dn rA.s.trIya prOdyogikI saMsTAna}}}\\  
+\textcolor {nithdarkblue}{
+{\Large{\dn hamIrapura}~-~{\dn 177005} {\dn (hi..pra..) BArata}}}\\
+\end{flushright}
+\end{minipage}
+\\\\
+\rule{\linewidth}{1pt}
+\vspace{0.2cm}
+\begin{center}
+\bf{\Large{CERTIFICATE}}
+\end{center}
+\vspace{0.02cm}
+\par
+I hereby certify that the work which is being presented in the M.Tech. Dissertation entitled {\bf ``Design and Performance Analysis of LDPC Codes in Different Wireless Scenario''}, in partial fulfillment of the requirements for the award of the {\bf Master of Technology} in {\bf Communication Systems \& Networks} and submitted to the Department of Electronics \& Communication Engineering of National Institute of Technology, Hamirpur HP, is an authentic record of my own work carried out during a period from July  2010 to July 2011 under the supervision of {\bf Mr.~Rakesh~Sharma, Ass't. Professor}, Department of E\&CE.
+
+The matter presented in this thesis has not been submitted by me for the award of any other degree elsewhere.
+\vspace{1.4cm}
+
+\begin{minipage}{6cm}
+\begin{flushleft}
+\end{flushleft}
+\end{minipage}\hspace{2.5cm}
+\begin{minipage}{6cm}
+\begin{flushright}
+\begin{center}
+\emph {Signature of Candidate}\\
+{\bf Ashish~Goswami}\\
+{09M440}
+\end{center}
+\end{flushright}
+\end{minipage}
+\vspace{0.4cm}
+
+This is to certify that the above statement made by the candidate is correct to the best of my knowledge.
+\vspace{1.4cm}
+
+\begin{minipage}{6cm}
+\begin{flushleft}
+Date: \today \\
+~\\~
+\end{flushleft}
+\end{minipage}\hspace{2.5cm}
+\begin{minipage}{6cm}
+\begin{flushright}
+\centering
+\emph {Signature of Supervisor}\\
+{\bf Mr.~Rakesh~Sharma}\\
+Ass't. Professor\\
+Department of E\&CE
+\end{flushright}
+\end{minipage}
+\vspace{0.9cm}
+
+\hspace{-1cm}
+\begin{minipage}{6cm}
+\begin{flushleft}
+\begin{center}
+\emph {Signature of}\\
+{\bf Head of Department}\\
+ Department of E\&CE\\
+NIT, Hamirpur
+\end{center}
+\end{flushleft}
+\end{minipage}\hspace{3.4cm}
+\begin{minipage}{6cm}
+\begin{flushright}
+\centering
+~\\~\\
+\emph {Signature of}\\
+{\bf External Examiner}
+\end{flushright}
+\end{minipage}
+

@@ -1,0 +1,462 @@
+\chapter{Design, Setup and Methodology}
+\label{chapter:methodology}
+\noindent\rule{\linewidth}{2pt}
+
+\section{Overview of the Experimental Pipeline}
+
+The experimental pipeline of this dissertation can be partitioned into six stages, each with explicit input and output contracts, executed deterministically from a single random seed.
+
+\begin{enumerate}[leftmargin=*]
+\item \textbf{Data acquisition and SCP-based labelling.} Download PTB-XL via KaggleHub, parse \texttt{ptbxl\_database.csv}, derive binary MI versus NORM labels from the \texttt{scp\_codes} field and the \texttt{scp\_statements.csv} diagnostic-class mapping.
+\item \textbf{Signal loading and per-record normalization.} Load each record's $(1000, 12)$ waveform from the \texttt{records100/} WFDB files at $100$\,Hz; apply per-record, per-lead $z$-score normalization.
+\item \textbf{Patient-wise splitting.} Apply a deterministic two-stage \texttt{GroupShuffleSplit} over patient identifiers to obtain disjoint training (70\%), validation (15\%), and test (15\%) cohorts; assert disjointness at runtime.
+\item \textbf{Base-model training.} Train three CNN base learners (\texttt{SimpleCNN}, \texttt{InceptionNet}, \texttt{ResNet1D}) independently from random initialization, with validation-AUC-based learning-rate scheduling and checkpoint selection.
+\item \textbf{Embedding extraction and XGBoost training.} Extract penultimate-layer embeddings from the Inception anchor on the training, validation, and test cohorts; train an XGBoost classifier on the training embeddings with validation as the early-stopping monitor.
+\item \textbf{Ensemble fusion, post-hoc tuning, and evaluation.} Combine the four predictors by validation-AUC-proportional weighting; optionally tune per-model thresholds and fit a logistic-regression meta-learner on out-of-fold validation predictions; evaluate on the held-out test cohort.
+\end{enumerate}
+
+The K-fold extension (\Cref{sec:kfold}) generalizes Steps 4 through 6 to a five-fold patient-wise resampling of the development cohort, producing fold-averaged predictions on the test cohort.
+
+\section{The PTB-XL Dataset}
+
+\subsection{Dataset Description}
+
+The PTB-XL database~\cite{wagner2020ptbxl}, distributed via the PhysioNet repository~\cite{goldberger2000physiobank}, is the dataset used throughout this dissertation. Three properties make it suited to the present aim. First, it is large by ECG standards: \textbf{21{,}837} ten-second resting 12-lead recordings sourced from \textbf{18{,}885} distinct patients, collected in Germany between 1989 and 1996. Second, every record is shipped at two sampling rates, a 100\,Hz low-resolution version and a 500\,Hz high-resolution version, letting the experimentalist choose between fidelity and compute. The present work uses the 100\,Hz version exclusively. At this rate, the diagnostically relevant ST and T morphology is preserved (the Nyquist limit of $50$\,Hz is comfortably above the bandwidth in which ST changes manifest), the per-record tensor is just $(12, 1000)$, and a batch size of $64$ fits within the memory budget of a single Colab T4 instance. Third, each record carries clinical-grade annotations: two cardiologists independently assigned SCP-ECG diagnostic codes, and PTB-XL ships a curated mapping from those codes to the higher-level diagnostic classes (\texttt{NORM}, \texttt{MI}, \texttt{STTC}, \texttt{CD}, \texttt{HYP}) on which most binary and multi-label studies rely.
+
+A record can carry multiple SCP codes simultaneously, which mirrors the multi-label nature of real clinical interpretation but, for a binary MI-vs-NORM study, requires the explicit selection rule described in the next subsection. The record-level metadata supplied alongside the waveform includes a patient identifier (the field on which patient-wise splitting depends), age, sex, recording site, recording date, and various technical fields (filter settings, electrode configuration, validating cardiologist's identifier). Of these, only the patient identifier is used downstream; the demographic fields are inspected for cohort-composition reporting but never fed into the model.
+
+\subsection{Binary MI / NORM Label Construction}
+
+Let $C(r)$ denote the set of SCP codes assigned to record $r$, and let $\mathcal{C}_{\mathrm{MI}}$ and $\mathcal{C}_{\mathrm{NORM}}$ denote, respectively, the sets of SCP codes whose diagnostic class is \texttt{MI} and \texttt{NORM} in \texttt{scp\_statements.csv}. The binary label $y(r)$ is defined as
+\begin{equation}
+y(r) = \begin{cases}
+1 & \text{if } C(r) \cap \mathcal{C}_{\mathrm{MI}} \neq \emptyset \text{ and } C(r) \cap \mathcal{C}_{\mathrm{NORM}} = \emptyset, \\
+0 & \text{if } C(r) \cap \mathcal{C}_{\mathrm{MI}} = \emptyset \text{ and } C(r) \cap \mathcal{C}_{\mathrm{NORM}} \neq \emptyset, \\
+\bot & \text{otherwise (record is discarded)}.
+\end{cases}
+\end{equation}
+
+The third (discard) branch excludes records with neither MI nor NORM codes (records dominated by ST/T changes, conduction disorders, or hypertrophy) and records that carry both MI and NORM codes simultaneously. The result is a clean binary problem in which the positive class is unambiguously infarction-positive and the negative class is unambiguously normal at the diagnostic level. The complete enumeration of MI codes used to populate $\mathcal{C}_{\mathrm{MI}}$ (14 codes covering anterior, anterolateral, anteroseptal, inferior, inferolateral, lateral, posterior, inferoposterior, inferoposterolateral, and subendocardial-injury patterns) and the single NORM code is given in \Cref{app:scp}.
+
+\subsection{Demographic Composition of the Cohort}
+
+\Cref{tab:demographics} reports the principal demographic characteristics of the working cohort and of each diagnostic class. The MI cohort is on average older than the NORM cohort by approximately a decade, with a mean age of $66.7$ years versus $53.4$ years, and is more heavily male ($63$\% versus $48$\% in NORM). Both patterns are consistent with the epidemiological literature on MI prevalence and reflect the biological reality that age and male sex are major modifiable and non-modifiable risk factors. These class-conditional demographic differences are partly informative for the classifier and partly a source of potential bias: a classifier that learns to predict MI from age alone, with no ECG signal, would already achieve substantial above-chance accuracy. The architecture choices in this dissertation reduce this risk by feeding only the ECG waveform to the network (no demographic inputs at the model boundary), but the underlying covariate structure of the cohort matters and is disclosed explicitly.
+
+\begin{table}[h]
+\centering
+\caption{Demographic composition of the working cohort by diagnostic class. Ages are reported as mean $\pm$ standard deviation.}
+\label{tab:demographics}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Quantity}              & \textbf{MI cohort} & \textbf{NORM cohort} & \textbf{Overall} \\
+\midrule
+Records                        & 5{,}486            & 9{,}527              & 15{,}013         \\
+Unique patients                & 4{,}932            & 8{,}521              & 13{,}453         \\
+Records per patient (mean)     & 1.11               & 1.12                 & 1.12             \\
+Age (years, mean $\pm$ SD)     & $66.7 \pm 11.8$    & $53.4 \pm 17.1$      & $58.3 \pm 16.6$  \\
+Male fraction                  & 0.63               & 0.48                 & 0.53             \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Cohort Statistics}
+
+Applying the rule above to PTB-XL yields a working cohort of $15{,}013$ records from $13{,}453$ unique patients, with approximately $37$\% MI and $63$\% NORM at both record and patient level. \Cref{tab:cohort} summarizes the cohort.
+
+\begin{table}[h]
+\centering
+\caption{Cohort statistics after SCP-based MI/NORM filtering of PTB-XL.}
+\label{tab:cohort}
+\begin{tabular}{lrr}
+\toprule
+\textbf{Quantity} & \textbf{Records} & \textbf{Unique patients} \\
+\midrule
+PTB-XL total                            & 21{,}837 & 18{,}885 \\
+After MI / NORM filter (working cohort) & 15{,}013 & 13{,}453 \\
+\quad of which MI (positive)            &  5{,}486 &  4{,}932 \\
+\quad of which NORM (negative)          &  9{,}527 &  8{,}521 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Preprocessing Pipeline}
+
+\subsection{Design Principles}
+
+The preprocessing pipeline adopted in this dissertation is governed by three explicit design principles. \textit{Principle 1: minimize signal distortion.} Aggressive bandpass filtering, baseline-wander removal, and notch filtering can attenuate low-frequency ST-segment changes that are precisely the diagnostic information of interest. \textit{Principle 2: eliminate sources of leakage between training and evaluation data.} Per-record normalization is permitted because it is computed independently per sample; global normalization across the dataset is forbidden. Beat segmentation is forbidden because it creates highly correlated samples from the same patient. Synthetic oversampling is forbidden because it perturbs the empirical distribution. \textit{Principle 3: maintain reproducibility and protocol transparency.} Every preprocessing step is deterministic with fixed seeds; resulting train/validation/test indices are saved alongside checkpoints.
+
+\subsection{Resampling, Standardization, and Channel Representation}
+
+All experiments use the $100$\,Hz low-resolution version of PTB-XL. Each record is standardized to exactly 10 seconds ($1{,}000$ samples per lead); records longer than 10 seconds are truncated and shorter records zero-padded. No sliding-window segmentation, no fixed-stride cropping, and no time-domain augmentation are performed during preprocessing. Each 10-second record is treated as a single, atomic training instance. All twelve standard ECG leads (I, II, III, aVR, aVL, aVF, V1 through V6) are retained; signals are arranged in a channel-first tensor format $(12, 1000)$ at the dataset boundary.
+
+\subsection{Per-Record \emph{z}-Score Normalization}
+
+A single normalization is applied: per-record, per-lead $z$-score. For lead $\ell$ of record $r$ with samples $x_{r,\ell,t}$,
+\begin{equation}
+\hat{x}_{r,\ell,t} = \frac{x_{r,\ell,t} - \mu_{r,\ell}}{\sigma_{r,\ell} + \epsilon},
+\qquad \epsilon = 10^{-8}.
+\end{equation}
+This normalization removes per-electrode amplitude scaling while preserving the relative morphology that carries the diagnostic information. Both $\mu$ and $\sigma$ are computed strictly within the record, so no information leaks across records.
+
+\subsection{Filtering and Noise Handling: A Deliberate Absence}
+
+The pipeline performs no explicit bandpass filtering, no baseline-wander removal, no power-line notch filtering, and no wavelet denoising. This is motivated by three considerations: modern CNN architectures with batch normalization~\cite{ioffe2015batch} suppress baseline drift implicitly; aggressive filtering risks attenuating slow ST-segment changes; and omitting heavy preprocessing makes the pipeline more robust to heterogeneous acquisition hardware. Pilot experiments comparing the pipeline with and without a 0.5--45\,Hz Butterworth bandpass showed no measurable AUC benefit from filtering.
+
+\subsection{Augmentation Strategy}
+
+For the canonical production pipeline (which produces the headline numbers of this thesis), no augmentation is applied; class imbalance is instead handled via a positive-class weight in the BCE loss. For the exploratory comparative study (the \texttt{titan/}, \texttt{ensemble/}, and \texttt{sota/} approach folders that pre-date the canonical pipeline), two mild augmentations were used during training: additive Gaussian noise with $\sigma = 0.01$ on all leads, and MI-class time scaling with factors uniformly in $[0.95, 1.05]$. Augmentation, where used, was strictly post-split and training-only.
+
+\section{Patient-Wise Splitting Protocol}
+
+The single most important methodological decision in this dissertation is to split data at the \textit{patient} level rather than at the record or beat level. The splitting routine is a deterministic two-stage \texttt{GroupShuffleSplit} from scikit-learn~\cite{pedregosa2011scikit}, parameterized by the patient-identifier array.
+
+\Cref{lst:split} gives the pseudocode. The first stage holds out $15$\% of patients as the test cohort. The second stage further splits the remaining $85$\% into approximately $70$\% training and $15$\% validation. Disjointness of patient identifiers between all three splits is verified at runtime by set-theoretic assertions; the program aborts if any patient appears in more than one split. Random seeds are fixed at $42$ and $43$ for the two stages, so the partition is bit-reproducible across runs.
+
+\begin{lstlisting}[caption={Patient-wise splitting routine (from \texttt{approaches/mi\_detection\_prod/data.py}).}, label={lst:split}]
+def patient_wise_split(groups, test_frac, val_frac, seed):
+    n = len(groups)
+    all_idx = np.arange(n)
+
+    gss1 = GroupShuffleSplit(n_splits=1, test_size=test_frac,
+                              random_state=seed)
+    trainval_idx, test_idx = next(gss1.split(all_idx, groups=groups))
+
+    rel_val = val_frac / (1.0 - test_frac)
+    gss2 = GroupShuffleSplit(n_splits=1, test_size=rel_val,
+                              random_state=seed + 1)
+    tr_rel, va_rel = next(
+        gss2.split(trainval_idx, groups=groups[trainval_idx])
+    )
+    train_idx = trainval_idx[tr_rel]
+    val_idx   = trainval_idx[va_rel]
+
+    tr_p = set(groups[train_idx].tolist())
+    va_p = set(groups[val_idx].tolist())
+    te_p = set(groups[test_idx].tolist())
+    assert tr_p.isdisjoint(va_p)
+    assert tr_p.isdisjoint(te_p)
+    assert va_p.isdisjoint(te_p)
+    return train_idx, val_idx, test_idx
+\end{lstlisting}
+
+The resulting partition is summarized in \Cref{tab:split-stats}. The validation set is used exclusively for model selection, learning-rate scheduling, ensemble weight estimation, post-hoc threshold tuning, and meta-learner training. The test set is touched once at the end to compute the final reported metrics.
+
+\begin{table}[h]
+\centering
+\caption{Patient-wise data partition used throughout this dissertation.}
+\label{tab:split-stats}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Split} & \textbf{Patients} & \textbf{Records} & \textbf{Approx.\ MI fraction} \\
+\midrule
+Training   & 9{,}417 & 10{,}511 & 0.37 \\
+Validation & 2{,}018 &  2{,}233 & 0.38 \\
+Test       & 2{,}018 &  2{,}269 & 0.37 \\
+\midrule
+Total      & 13{,}453 & 15{,}013 & 0.37 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Mathematical Foundations of the Models}
+\label{sec:math-foundations}
+
+This section formalizes the mathematical building blocks used by every model in this dissertation. The treatment is deliberately complete: subsequent architecture descriptions can then refer to these primitives by name without ambiguity.
+
+\subsection{One-Dimensional Convolution}
+
+A one-dimensional convolution layer with $K$ output channels, kernel size $k$, stride $s$, padding $p$, and dilation $d$ maps an input tensor $X \in \mathbb{R}^{C_{\mathrm{in}} \times T}$ to an output $Y \in \mathbb{R}^{K \times T'}$, where the temporal length is
+\begin{equation}
+T' = \left\lfloor \frac{T + 2p - d(k - 1) - 1}{s} \right\rfloor + 1.
+\end{equation}
+The output is computed channel-wise as
+\begin{equation}
+Y_{i,t} = b_i + \sum_{j=1}^{C_{\mathrm{in}}} \sum_{m=0}^{k-1} W_{i, j, m} \cdot X_{j,\, s\cdot t + d\cdot m - p},
+\label{eq:conv1d}
+\end{equation}
+with learnable weight tensor $W \in \mathbb{R}^{K \times C_{\mathrm{in}} \times k}$ and bias $b \in \mathbb{R}^{K}$. The receptive field of a single convolution is $k$; stacked convolutions produce a receptive field that grows linearly with depth and exponentially with dilation.
+
+For the TITAN base learners, all convolutions use stride 1 (with subsequent pooling for downsampling) except the ResNet1D stem, which uses stride 2, and the residual blocks at layers 2 through 4, which use stride 2 to halve the temporal dimension between layers.
+
+\subsection{Batch Normalization}
+
+Batch normalization~\cite{ioffe2015batch} normalizes activations using the batch-wise mean and variance, with two learnable parameters $\gamma$ and $\beta$ per channel:
+\begin{equation}
+\mathrm{BN}(x_{i}) = \gamma_i \cdot \frac{x_i - \mu_i^{(\mathcal{B})}}{\sqrt{\sigma_i^{2(\mathcal{B})} + \epsilon}} + \beta_i,
+\end{equation}
+where $\mu_i^{(\mathcal{B})}$ and $\sigma_i^{2(\mathcal{B})}$ are the per-channel mean and variance computed across the mini-batch $\mathcal{B}$, and $\epsilon = 10^{-5}$ is a numerical stabilizer. At inference time, running estimates of $\mu_i$ and $\sigma_i^2$ accumulated during training are used in place of batch statistics, so that single-record inference is deterministic.
+
+\subsection{Rectified Linear Activation}
+
+The ReLU non-linearity is
+\begin{equation}
+\mathrm{ReLU}(x) = \max(0, x).
+\end{equation}
+It is computationally cheap, does not saturate for positive inputs, and has well-understood gradient behaviour. All base learners use ReLU; alternatives such as GELU or SiLU were considered but did not improve validation AUC in pilot experiments.
+
+\subsection{Residual Block}
+
+A basic residual block~\cite{he2016deep} with input channels $C_{\mathrm{in}}$ and output channels $C_{\mathrm{out}}$ at stride $s$ computes
+\begin{equation}
+\mathcal{F}(X) = \mathrm{BN}\bigl(W_2 * \mathrm{ReLU}(\mathrm{BN}(W_1 * X))\bigr), \quad Y = \mathrm{ReLU}\bigl(\mathcal{F}(X) + \pi(X)\bigr),
+\end{equation}
+where $*$ denotes convolution, $W_1, W_2$ are kernel-3 convolutions (the first with stride $s$, the second with stride 1), and $\pi(\cdot)$ is the identity if $s=1$ and $C_{\mathrm{in}}=C_{\mathrm{out}}$, otherwise a $1\times 1$ projection convolution with stride $s$ followed by batch normalization. The residual connection enables training of deep networks by providing a direct gradient path from the loss to early layers.
+
+\subsection{Inception Block}
+
+The Inception block used in the TITAN \texttt{InceptionNet} has four parallel branches that operate on the same input and whose outputs are concatenated along the channel dimension:
+\begin{align}
+B_1 &= \mathrm{ReLU}(\mathrm{BN}(W_1 *_1 X)), \\
+B_2 &= \mathrm{ReLU}(\mathrm{BN}(W_3 *_1 X)), \\
+B_3 &= \mathrm{ReLU}(\mathrm{BN}(W_5 *_1 X)), \\
+B_4 &= \mathrm{ReLU}(\mathrm{BN}(W_p *_1 \mathrm{MaxPool}_3(X))), \\
+Y &= [B_1 ; B_2 ; B_3 ; B_4],
+\end{align}
+where $W_1, W_3, W_5$ denote kernel sizes 1, 3, and 5 respectively, $W_p$ is a $1\times 1$ projection after a $3\times 1$ stride-1 max-pool, and $[;]$ denotes channel-wise concatenation. Each branch produces $C_{\mathrm{out}}/4$ channels, giving a total of $C_{\mathrm{out}}$ output channels.
+
+\subsection{Global Average Pooling}
+
+For a tensor $Y \in \mathbb{R}^{C \times T'}$, global average pooling yields a vector $g \in \mathbb{R}^{C}$ with $g_c = \frac{1}{T'} \sum_{t=1}^{T'} Y_{c, t}$. GAP collapses the temporal dimension, providing translation invariance and reducing the parameter count of subsequent dense layers by a factor of $T'$ relative to a flatten-and-dense alternative.
+
+\subsection{Self-Attention}
+
+A scaled-dot-product attention~\cite{vaswani2017attention} layer with $h$ heads operates on an input sequence $X \in \mathbb{R}^{T \times D}$ by projecting it to queries $Q$, keys $K$, and values $V$ per head:
+\begin{equation}
+Q^{(\ell)} = X W^{(\ell)}_Q, \quad K^{(\ell)} = X W^{(\ell)}_K, \quad V^{(\ell)} = X W^{(\ell)}_V,
+\end{equation}
+and computing
+\begin{equation}
+\mathrm{Attn}^{(\ell)}(Q^{(\ell)}, K^{(\ell)}, V^{(\ell)}) = \mathrm{softmax}\!\left( \frac{Q^{(\ell)} {K^{(\ell)}}^\top}{\sqrt{d_k}} \right) V^{(\ell)}.
+\end{equation}
+The $h$ head outputs are concatenated and projected back to dimension $D$ by a learnable matrix $W_O$. Attention has complexity $\mathcal{O}(T^2 D)$, which for a 1000-sample ECG input is manageable but is the principal reason for the higher computational cost of attention-based and transformer-based variants explored in this work.
+
+\subsection{Binary Cross-Entropy with Logits and Positive Weighting}
+
+For binary classification with sigmoid output, the loss is
+\begin{equation}
+\mathcal{L}(\hat{y}, y) = -\bigl[\, w_{+} \cdot y \log\sigma(\hat y) + (1 - y) \log\bigl(1 - \sigma(\hat y)\bigr)\,\bigr],
+\label{eq:bce-pos}
+\end{equation}
+where $\hat y$ is the network logit, $y \in \{0, 1\}$ the ground-truth label, $\sigma(\cdot)$ the logistic sigmoid, and $w_{+}$ a per-class weight. The numerically stable PyTorch implementation \texttt{BCEWithLogitsLoss(pos\_weight=$w_{+}$)} avoids explicit computation of the sigmoid.
+
+\subsection{Adam Optimizer}
+
+The Adam optimizer~\cite{kingma2015adam} maintains exponentially decaying running estimates of the first and second moments of per-parameter gradients,
+\begin{equation}
+m_t = \beta_1 m_{t-1} + (1-\beta_1) g_t, \qquad v_t = \beta_2 v_{t-1} + (1-\beta_2) g_t^2,
+\end{equation}
+and updates parameters as
+\begin{equation}
+\theta_{t+1} = \theta_t - \eta \cdot \frac{\hat m_t}{\sqrt{\hat v_t} + \epsilon},
+\end{equation}
+with bias-corrected estimates $\hat m_t = m_t / (1 - \beta_1^t)$ and $\hat v_t = v_t / (1 - \beta_2^t)$. The TITAN pipeline uses $\beta_1 = 0.9$, $\beta_2 = 0.999$, $\epsilon = 10^{-8}$, and $\eta_0 = 10^{-3}$, with $\eta$ subsequently controlled by the \texttt{ReduceLROnPlateau} scheduler.
+
+\subsection{XGBoost Objective for Binary Classification}
+
+The XGBoost classifier~\cite{chen2016xgboost} fits an additive ensemble of regression trees by minimizing
+\begin{equation}
+\mathcal{L}^{(t)} = \sum_{i=1}^{N} \ell\bigl(y_i, \hat y_i^{(t-1)} + f_t(\mathbf{z}_i)\bigr) + \Omega(f_t),
+\end{equation}
+where $\ell$ is the logistic loss for binary classification, $\hat y_i^{(t-1)}$ is the ensemble prediction up to round $t-1$, $f_t$ is the new tree added at round $t$, and $\Omega(f_t) = \gamma T + \frac{1}{2} \lambda \|w\|^2$ regularizes tree complexity ($T$ leaves, leaf weights $w$). A second-order Taylor expansion of the loss yields closed-form leaf weights and split scores, making each round computationally efficient. The TITAN pipeline trains XGBoost on the 128-dimensional Inception embeddings $\mathbf{z}$ with 600 trees, learning rate 0.05, and maximum depth 6.
+
+\section{Model Architectures}
+\label{sec:archs}
+
+This section presents the architectures evaluated in this dissertation. All architectures receive the same input tensor of shape $(B, 12, 1000)$, where $B$ is the mini-batch size, and terminate in a single-logit head trained against binary cross-entropy with a positive-class weight. The three base learners of the TITAN ensemble (SimpleCNN, InceptionNet, ResNet1D) are described first; four additional architectures used in the comparative study are described thereafter.
+
+\subsection{SimpleCNN: A Shallow Convolutional Baseline}
+\label{sec:simplecnn}
+
+\texttt{SimpleCNN} is a deliberately compact three-block convolutional network. Each block consists of a 1D convolution, batch normalization~\cite{ioffe2015batch}, a ReLU activation, and a max-pool layer of stride 2. Kernel sizes shrink from 7 (first block) to 5 to 3 (third block); filter counts grow $32 \to 64 \to 128$. After the third block, a global average pool collapses the temporal dimension to a 128-dimensional vector. A penultimate dense layer with ReLU activation maps this to a 128-dimensional embedding; a final linear layer projects to a single logit. Dropout $0.3$~\cite{srivastava2014dropout} precedes the head during training. The network has approximately 150\,k trainable parameters.
+
+\subsection{InceptionNet: Multi-Scale Convolutions}
+\label{sec:inception}
+
+\texttt{InceptionNet} adapts the multi-branch convolution principle~\cite{szegedy2015going,ismail2020inception}. Each Inception block applies four parallel branches: a $1\times 1$ convolution, a $3\times 1$ convolution, a $5\times 1$ convolution, and a $3\times 1$ max-pool followed by a $1\times 1$ convolution. Each branch is followed by batch normalization and ReLU. Outputs are concatenated along channels. The full network is a $7\times 1$ stem (12 $\to$ 32 channels) followed by three Inception blocks with 32, 48, and 64 channels per branch respectively, max-pooled between blocks. A global average pool produces a 256-dimensional vector mapped to a 128-dimensional embedding by a penultimate dense layer. The network has approximately 0.5\,M parameters and serves as the \textbf{anchor} model of the TITAN ensemble: its penultimate embeddings are the input feature space for the XGBoost meta-classifier.
+
+\subsection{ResNet1D: Deep Residual Network}
+\label{sec:resnet1d}
+
+\texttt{ResNet1D} is a one-dimensional adaptation of ResNet~\cite{he2016deep}. Each residual block contains two $3\times 1$ convolutions with batch normalization and ReLU, and a shortcut connection adding the block input to the second convolution's output. When channels or stride differ, a $1\times 1$ projection is used in the shortcut. The full network begins with a $7\times 1$ stem of stride 2 followed by a stride-2 $3\times 1$ max-pool. Four residual layers follow with channel counts $64 \to 128 \to 256 \to 512$ and stride 2 between layers; each layer contains two residual blocks. A global average pool produces a 512-dimensional vector mapped to a 128-dimensional embedding; dropout $0.3$ precedes the head. The network has approximately 4\,M parameters.
+
+\subsection{Additional Architectures for the Comparative Study}
+
+Three additional architectures are included in the comparative study reported in \Cref{chapter:results}.
+
+\textit{ResNet1D with multi-head attention.} A self-attention module~\cite{vaswani2017attention} is inserted after the fourth residual layer and before the global average pool. The module treats each post-bottleneck temporal position as a token and applies a single multi-head self-attention layer with four heads. The attended sequence is added residually before pooling.
+
+\textit{InceptionTime baseline at 250\,Hz.} A separate InceptionTime variant~\cite{ismail2020inception} uses bottleneck $1\times 1$ convolutions and kernel sizes $\{10, 20, 40\}$ at a sampling rate of $250$\,Hz, included for comparison with the $100$\,Hz InceptionNet.
+
+\textit{Local/Global/Spectral Network (LGS-Net).} A dual-stream architecture combining a time-domain residual stream (with local-window attention) and a spectral stream operating on per-lead STFT magnitude spectrograms (with a 2D CNN), fused by concatenation before a dense head.
+
+\textit{Compact Convolutional Transformer (CCT).} The convolutional-tokenizer plus Transformer-encoder design of Hassani et al.~\cite{hassani2021escaping}, adapted to 1D ECG with a two-block convolutional tokenizer (stride-2 $7\times 1$), a 4-block / 4-head / $D{=}128$ Transformer encoder, and a learnable class-pooling projection.
+
+\Cref{tab:arch-summary} summarizes the architectures, their parameter counts, and their role in this study.
+
+\begin{table}[h]
+\centering
+\caption{Summary of evaluated architectures.}
+\label{tab:arch-summary}
+\small
+\begin{tabularx}{\textwidth}{l r l X}
+\toprule
+\textbf{Model} & \textbf{Params (M)} & \textbf{Family} & \textbf{Role in this study} \\
+\midrule
+SimpleCNN          & 0.15 & Pure CNN, shallow           & TITAN base learner; reference baseline \\
+InceptionNet       & 0.5  & Multi-scale CNN             & TITAN \emph{anchor}; embeddings $\to$ XGB \\
+ResNet1D           & 4.0  & Deep residual CNN           & TITAN base learner \\
+ResNet+Attention   & 4.3  & Residual CNN + MHA          & Comparative study \\
+InceptionTime      & 0.4  & Multi-scale CNN ($250$ Hz)  & Comparative study \\
+LGS-Net            & 1.2  & Dual-stream time/spectral   & Comparative study \\
+CCT                & 1.6  & Conv tokenizer + Transformer & Comparative study \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\section{The TITAN Ensemble Framework}
+
+\subsection{Motivation for Heterogeneous Ensembling}
+
+Single-model ECG classifiers suffer from two recurrent failure modes that ensemble learning is well-suited to mitigate. First, individual deep networks are \textit{variance-dominated} in moderate-data regimes; averaging or stacking predictions from multiple base learners reduces this variance, in the spirit of bagging~\cite{breiman1996bagging}. Second, different architectures exhibit \textit{different inductive biases} and therefore make \textit{different kinds} of errors; combining them reduces the dependence on any single bias, in the spirit of stacked generalization~\cite{wolpert1992stacked}. The TITAN ensemble adds a third element: rather than fusing only the output probabilities of the base learners, it also fuses their \textit{latent representations}, by training an XGBoost~\cite{chen2016xgboost} classifier on the penultimate-layer embeddings of the Inception anchor. The intuition is that the pre-classifier embedding is a richer signal than the post-classifier scalar probability and that a gradient-boosted tree ensemble is well-suited to learn non-linear decision boundaries in that embedding space.
+
+\subsection{TITAN Architecture and Data Flow}
+
+TITAN (\textit{Three Independent Time-domain Architectures Network}) is structured around four predictors: an \textbf{anchor} (\texttt{InceptionNet}, producing both probability $p_{\mathrm{Inc}}$ and 128-dim embedding $\mathbf{z}_{\mathrm{Inc}}$); two \textbf{support} models (\texttt{SimpleCNN}, producing $p_{\mathrm{S}}$, and \texttt{ResNet1D}, producing $p_{\mathrm{R}}$); and an \textbf{embedding classifier} (\texttt{XGBoost} on $\mathbf{z}_{\mathrm{Inc}}$, producing $p_{\mathrm{X}}$). The three deep networks are trained independently on the same training cohort. After training, the Inception anchor is run in evaluation mode (\texttt{model.eval()}, dropout disabled, \texttt{torch.no\_grad()}) to extract embeddings for the training, validation, and test sets. The XGBoost model is then trained on the training embeddings, with validation embeddings as the early-stopping monitor and test embeddings withheld until final evaluation.
+
+\subsection{Penultimate Embedding Extraction Discipline}
+
+A subtle but important implementation detail is that the penultimate-layer embedding must be computed in a deterministic, dropout-free manner. Each architecture exposes a dedicated \texttt{.penultimate(x)} method that runs the trunk and the penultimate dense layer but not the final dropout or head. Combined with \texttt{model.eval()} (which switches batch normalization to inference mode) and \texttt{torch.no\_grad()} (which disables gradient bookkeeping), this guarantees bit-identical embeddings across multiple extractions of the same record. Earlier exploratory pipelines that did not follow this discipline produced different XGBoost training data on re-runs, a subtle source of non-determinism that was identified and removed in the canonical pipeline.
+
+\subsection{Ensemble Fusion: Validation-AUC Weighted Averaging}
+
+The four predictors are fused by a linear weighted average of their sigmoid probabilities. The weights are derived from validation-set AUC values $A_i$ of each predictor $i \in \{\mathrm{S}, \mathrm{Inc}, \mathrm{R}, \mathrm{X}\}$:
+\begin{equation}
+w_i = \frac{A_i}{\sum_{j} A_j}, \qquad
+p_{\mathrm{TITAN}}(r) = \sum_i w_i\, p_i(r).
+\end{equation}
+This rule is intentionally simple. It avoids the overfitting risk of more elaborate learned-weight schemes and produces approximately uniform weights when all four predictors are similarly strong. The resulting weights are $(w_{\mathrm{S}}, w_{\mathrm{Inc}}, w_{\mathrm{R}}, w_{\mathrm{X}}) = (0.2503, 0.2505, 0.2488, 0.2504)$ for the canonical pipeline. A binary decision is obtained by thresholding $p_{\mathrm{TITAN}}$ at $0.5$ in the headline configuration; \Cref{chapter:results} also reports a post-hoc tuned-threshold result.
+
+\subsection{Post-Hoc Logistic-Regression Meta-Learner}
+
+A second, more expressive fusion is also implemented. A logistic-regression meta-learner takes the four base-model probabilities $(p_{\mathrm{S}}, p_{\mathrm{Inc}}, p_{\mathrm{R}}, p_{\mathrm{X}})$ as input and produces a scalar probability $p_{\mathrm{Meta}}$. The meta-learner is trained on the validation cohort, with five-fold patient-wise out-of-fold cross-validation used to derive a threshold that does not suffer from the in-sample optimism of training and tuning on the same fold. The fitted weights are
+\[
+p_{\mathrm{Meta}}(r) = \sigma\bigl(-4.4459 + 2.0494\, p_{\mathrm{S}} + 2.8445\, p_{\mathrm{Inc}} + 1.2088\, p_{\mathrm{R}} + 1.4699\, p_{\mathrm{X}}\bigr),
+\]
+where $\sigma(\cdot)$ is the logistic sigmoid. The Inception predictor receives the largest weight, consistent with its position as the embedding anchor.
+
+\subsection{K-Fold Patient-Wise Ensemble Extension}
+\label{sec:kfold}
+
+For applications in which 1 to 2 additional percentage points of accuracy justify substantially increased training cost, a five-fold patient-wise extension is provided. The test set is held fixed (same patient-wise split as the canonical pipeline) and the combined training-plus-validation cohort is partitioned five ways using \texttt{GroupKFold} over patient identifiers. For each fold, three CNNs and one XGBoost classifier are trained on four folds and evaluated on the held-out fold, producing out-of-fold predictions on the development cohort and fold-averaged predictions on the test cohort. Both AUC-weighted averaging and logistic-regression meta-learning are then applied at the fold level. The K-fold ensemble produces 15 CNN checkpoints (3 architectures $\times$ 5 folds) and 5 XGBoost models in total; expected runtime is 60--90 minutes on a single T4 GPU.
+
+\section{Training Algorithm in Detail}
+\label{sec:training-algorithm}
+
+The training procedure for each base learner is summarized as Algorithm-style pseudocode in \Cref{lst:train-loop}. The key design choices are: (i) the best checkpoint is selected by validation AUC at the end of each epoch, not by validation loss; (ii) learning-rate reduction and early stopping both monitor validation AUC, which keeps all model-selection signals on a patient-disjoint cohort; (iii) the loss-function positive weight $w_{+}$ is computed from the \textit{training} class distribution only, never from validation or test; and (iv) the validation AUC is recomputed on the full validation cohort after each epoch, so that early checkpoints are not biased by stochastic mini-batch statistics.
+
+\begin{lstlisting}[caption={Training loop for a single base learner (paraphrased from \texttt{approaches/mi\_detection\_prod/train.py}).}, label={lst:train-loop}]
+def train_one_model(model, train_loader, val_loader, n_pos, n_neg,
+                    max_epochs=50, patience=8, lr=1e-3, wd=1e-4):
+    pos_weight = torch.tensor([n_neg / max(n_pos, 1)])
+    criterion = nn.BCEWithLogitsLoss(pos_weight=pos_weight.to(device))
+    optimizer = optim.Adam(model.parameters(), lr=lr, weight_decay=wd)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer, mode='max', factor=0.5, patience=4, min_lr=1e-6)
+
+    best_val_auc = -1.0
+    best_state   = None
+    epochs_since_improve = 0
+
+    for epoch in range(max_epochs):
+        # ----- train -----
+        model.train()
+        for x, y in train_loader:
+            x, y = x.to(device), y.to(device)
+            optimizer.zero_grad()
+            logits = model(x)
+            loss = criterion(logits, y)
+            loss.backward()
+            optimizer.step()
+
+        # ----- validation AUC -----
+        model.eval()
+        val_logits, val_y = [], []
+        with torch.no_grad():
+            for x, y in val_loader:
+                val_logits.append(model(x.to(device)).cpu())
+                val_y.append(y)
+        val_p = torch.sigmoid(torch.cat(val_logits)).numpy()
+        val_y = torch.cat(val_y).numpy()
+        val_auc = roc_auc_score(val_y, val_p)
+
+        scheduler.step(val_auc)
+        if val_auc > best_val_auc + 1e-6:
+            best_val_auc = val_auc
+            best_state = {k: v.detach().cpu().clone()
+                          for k, v in model.state_dict().items()}
+            epochs_since_improve = 0
+        else:
+            epochs_since_improve += 1
+            if epochs_since_improve >= patience:
+                break
+
+    model.load_state_dict(best_state)
+    return model, best_val_auc
+\end{lstlisting}
+
+The total training time for the three base learners on the canonical pipeline is approximately 12 to 18 minutes on a single Colab T4 GPU. Memory peak is approximately 4 to 6 GB. XGBoost training on the 128-dimensional Inception embeddings adds approximately 1 minute. Embedding extraction is approximately 30 seconds. Ensemble construction and reporting add a few seconds.
+
+\section{Post-Hoc Threshold Tuning Algorithm}
+\label{sec:threshold-tuning}
+
+After training, the canonical pipeline runs a separate post-hoc tuning stage that does not modify any model weight. Two operations are performed.
+
+\textit{Per-model threshold search.} For each of the four base predictors and for the AUC-weighted ensemble, the validation-set probabilities are sorted and a grid of candidate thresholds in $[0.01, 0.99]$ with step $0.005$ is evaluated. The threshold maximizing validation accuracy is selected and serialized. This threshold is then applied to the test-set probabilities of the corresponding predictor. The pseudocode is given in \Cref{lst:thr-tune}.
+
+\begin{lstlisting}[caption={Accuracy-optimal threshold tuning on validation (\texttt{tune.py}).}, label={lst:thr-tune}]
+def optimal_threshold(val_y, val_p, grid_lo=0.01, grid_hi=0.99, step=0.005):
+    thresholds = np.arange(grid_lo, grid_hi + step, step)
+    best_thr, best_acc = 0.5, -1.0
+    for thr in thresholds:
+        y_hat = (val_p >= thr).astype(int)
+        acc = (y_hat == val_y).mean()
+        if acc > best_acc:
+            best_acc, best_thr = acc, float(thr)
+    return best_thr, best_acc
+\end{lstlisting}
+
+\textit{Logistic-regression meta-learner.} A second-stage logistic regression is fit on the four-dimensional vector of base-model validation probabilities, $\mathbf{p}_{\mathrm{val}} = (p_{\mathrm{S}}, p_{\mathrm{Inc}}, p_{\mathrm{R}}, p_{\mathrm{X}})$. To avoid in-sample optimism from training and tuning on the same fold, the meta-learner threshold is chosen by five-fold patient-wise out-of-fold cross-validation on the validation cohort: for each fold, the meta-learner is fit on the other four folds and applied to the held-out fold, and the threshold is grid-searched on the resulting OOF predictions. The final meta-learner is then refit on the full validation cohort and applied, with the tuned threshold, to the test cohort.
+
+The combined effect of these two operations is a modest but consistent accuracy improvement (approximately +0.6 percentage points on the TITAN ensemble; see \Cref{chapter:results}) at no additional training cost.
+
+\section{Training and Optimization Protocol}
+
+\subsection{Loss Function}
+
+All deep networks are trained against binary cross-entropy on logits, with a positive-class weight to compensate for the residual class imbalance:
+\begin{equation}
+\mathcal{L} = -\frac{1}{N}\sum_{i=1}^{N} \bigl[ w_{+}\, y_i \log \sigma(\hat{y}_i) + (1 - y_i)\log(1 - \sigma(\hat{y}_i)) \bigr],
+\end{equation}
+where $\hat{y}_i$ is the network logit, $\sigma(\cdot)$ is the logistic sigmoid, and $w_{+}$ is the ratio of negative to positive training samples. This is the PyTorch \texttt{BCEWithLogitsLoss} with the \texttt{pos\_weight} parameter, which is numerically more stable than applying the sigmoid separately. XGBoost handles imbalance via the analogous \texttt{scale\_pos\_weight} parameter.
+
+\subsection{Optimizer, Scheduling, and Stopping}
+
+All deep networks are optimized using Adam~\cite{kingma2015adam} with $\eta = 10^{-3}$, $\beta_1 = 0.9$, $\beta_2 = 0.999$, weight decay $10^{-4}$. A \texttt{ReduceLROnPlateau} scheduler monitors the validation AUC and halves the learning rate when no improvement is observed for four consecutive epochs, with a floor of $10^{-6}$. Early stopping aborts training when no improvement in validation AUC has been observed for eight consecutive epochs. The maximum number of epochs is 50; in practice, all three base architectures converge in under 25 epochs. All training uses a batch size of 64.
+
+\subsection{XGBoost Hyperparameters}
+
+The XGBoost meta-classifier uses 600 trees, $\eta = 0.05$, maximum tree depth 6, row subsample 0.8, column subsample 0.8, the \texttt{hist} tree method on a single CPU thread (for determinism), AUC as the evaluation metric, and seed 42. Values were chosen to balance training time and predictive performance and to keep the XGBoost step deterministic.
+
+\subsection{Reproducibility Harness}
+
+A \texttt{set\_determinism(seed)} function is invoked at program start. It sets \newline \texttt{PYTHONHASHSEED} and \texttt{CUBLAS\_WORKSPACE\_CONFIG}, seeds the Python, NumPy, and PyTorch (CPU + CUDA) random number generators, forces cuDNN to deterministic mode, disables the cuDNN benchmark autotuner, and invokes \newline \texttt{torch.use\_deterministic\_algorithms(True)}. On a fixed CUDA toolkit and cuDNN version, the pipeline produces bit-identical outputs across multiple executions. The complete enumeration of seeds and other configuration constants is reproduced in \Cref{app:config}, and the inventory of released artefacts (checkpoints, embeddings, predictions, reports) is documented in \Cref{app:artefacts}.
+
+\section{Evaluation Metrics and Protocol}
+
+For each model, the following metrics are computed on the held-out test cohort: AUC; accuracy $(\mathrm{TP}+\mathrm{TN})/N$; sensitivity (recall) $\mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$; specificity $\mathrm{TN}/(\mathrm{TN}+\mathrm{FP})$; precision $\mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$; F1-score (harmonic mean of precision and recall); and the full $2\times 2$ confusion matrix. AUC is reported as the primary metric because it is threshold-independent. All other metrics are computed at the same fixed threshold ($0.5$ for the headline result; per-model accuracy-optimal thresholds for the tuned result, where the threshold is grid-searched on validation in $[0.01, 0.99]$ at step $0.005$).
+
+No cross-validation is performed for the canonical pipeline; all metrics correspond to a single deterministic patient-wise split. The K-fold extension reports out-of-fold averages on the development cohort and fold-averaged predictions on the test cohort. The test set is touched once at the end of evaluation; no quantity computed on the test set is ever fed back into model selection, threshold setting, or ensemble weighting.
+
+\section{Computational Environment}
+
+The canonical pipeline was executed on a Google Colab T4 GPU instance with 16 GB GPU memory, with PTB-XL cached locally after an initial KaggleHub download (one-time cost approximately 1.7 GB). End-to-end runtime is approximately 15 to 25 minutes after dataset download. The K-fold pipeline requires approximately 60 to 90 minutes. Software stack: Python 3.10, PyTorch 2.x~\cite{paszke2019pytorch}, NumPy~\cite{pedregosa2011scikit}, scikit-learn~\cite{pedregosa2011scikit}, XGBoost 2.x~\cite{chen2016xgboost}, WFDB~\cite{xie2024wfdb}. All result artefacts (checkpoints, embeddings, predictions, configuration snapshots, JSON reports, Markdown tables, and confusion-matrix figures) are written to the \texttt{results/} directory and included in the released artefact bundle.

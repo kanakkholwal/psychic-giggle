@@ -1,0 +1,39 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Usage of spectrum by opportunistic access\relax }}{3}{}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The cognitive cycle.\relax }}{5}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The wiretap model\relax }}{21}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Different Architecture Receiver\relax }}{39}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Architecture of Time Switching\relax }}{40}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Architecture of Power Splitting\relax }}{41}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Switching Antenna Architecture\relax }}{41}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces System model having a PU, a $(S_{T_x})$, $S_{R_x}$ as well as the E all nodes having multiple antennas.\relax }}{50}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces SOP with $\gamma _1 $ (dB) for $N_p=N_b=N_a=2$, and $\sigma =1$ for varying value of $\gamma _2(dB)$ and $N_E$.\relax }}{60}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces SOP with $\gamma _1 $ (dB) for $N_p=N_E=N_a=2 $, and $\gamma _2=10dB$ for varying value of $\sigma $ and $N_b$.\relax }}{61}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Intercept and SOP with $\gamma _1 $ (dB) for $N_p=N_b=N_a=N_E=2 $,$\gamma _2=10(dB)$ and $\sigma =1$ for varying value of $N_a$.\relax }}{61}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces SOP with $\gamma _{1}$ dB for$ N_p =N_E=N_b=N_a=2$,$\sigma =1$,$\eta _E=0.5$ and $\gamma _2$=10 dB.\relax }}{62}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces SOP with $\gamma _1$ dB for$ N_p=N_E=N_b=2, \sigma =1$ $\eta _E=0.5$ and $\eta _m=0.5$ for varying$ N_a$ and $\gamma _2$.\relax }}{63}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces SOP with $\gamma _1 dB$ for $N_p=N_E=N_b=2 $,$\eta _E=0.5$ $\sigma =1 $ and $\gamma _2=10dB$\relax }}{64}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces System model having a PU, $(S_{T_x})$, ($S_{R_x}$) as well as the E having SWIPT architecture at $S_{R_x}$ and $E$. \relax }}{67}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces SOP with $\gamma _1 dB$ for $N_p=N_E=2 $,$\rho _1=\rho _2=0.6$, $\sigma =1 $ and $\gamma _2=10dB$\relax }}{74}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces SOP with $\rho _1$ for $N_p=N_E=2 $,$\gamma _1=\gamma _2=10(dB)$,$\rho _2=0.6$ and $\sigma =1$\relax }}{75}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces SOP with $\gamma _1(dB) $ for $N_p=N_E=N_T=2 $,$\gamma _2=10(dB)$,$\rho _1=\rho _2=0.6$ and $\sigma =1$\relax }}{76}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces SOP with $\gamma _1 dB$ for $N_p=N_E=2 $,$N_T=4$,$\rho _1=\rho _2=0.6$ and $\sigma =1$\relax }}{77}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces SOP with $\gamma _1(dB) $ for $N_p=N_T=2 $,$\gamma _2=10(dB)$,$\rho _1=\rho _2=0.6$ and $\sigma =1$\relax }}{77}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces SOP with $\gamma _1 $ for $N_p=N_E=N_T=2 $, $\rho _1=\rho _2=0.5$ and $\sigma =1$\relax }}{88}{}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces SOP with $\gamma _1 $ for $N_p=N_E=N_T=2, $, $\eta _1=\eta _2=\eta _3=\rho _2=0.5$, and $\sigma =1$\relax }}{88}{}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces SOP with $\rho _1 $ for $N_p=N_E=N_T=2 $,$\rho _2=0.5$,$\eta _2=\eta _3=0.5$ and $\sigma =1$\relax }}{89}{}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces SOP with $\gamma _1 $ for $N_p=N_E=2 $,$\rho _1=\rho _2=0.5$, and $\eta _1=\eta _2=\eta _3=0.5$.\relax }}{89}{}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces SOP v/s $\gamma _1$ for OAS and SAS schemes having $N_a$ =$N_R$=$N_E$, $\rho _1=0.7$, $\eta _1=\eta _1=\eta _3=0.5$ and $\gamma _2=10dB$.\relax }}{108}{}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces SOP v/s $\gamma _1$ for diversity combining techniques having $N_a$ =$N_R$=$N_E$, $\rho _1=0.7$, and $\eta _1=\eta _1=\eta _3=0.5$.\relax }}{109}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces SOP v/s $\gamma _1$ for varying $N_R$ having $N_a$ =$N_R$=$N_E$=2, $\rho _1=0.5$, $\eta _1=\eta _1=\eta _3=0.5$ and $\gamma _2=5dB$.\relax }}{109}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces SOP v/s $\gamma _1$ for varying value of $\eta _1$ and $\rho _1$ having $\gamma _2=10dB$, $N_a=N_E=N_p=N_a=2$ and $\eta _2=\eta _3=0.5$.\relax }}{110}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces SOP v/s $\gamma _1$(dB) for varying value of $N_E$ having $N_a$ =$N_R$=$N_E$=2, $\rho _1=0.5$, $\eta _1=\eta _2=\eta _3=0.5$ and $\gamma _2=5dB$.\relax }}{110}{}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces intercept probability/SOP v/s $\gamma _1(dB)$ for diversity combining techniques, SAS and OAS schemes having $N_a$ =$N_R$=$N_E$, $\rho _1=0.7$, and $\eta _1=\eta _1=\eta _3=0.5$.\relax }}{111}{}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces intercept probability/SOP v/s $\gamma _1(dB)$ for varying $N_a$ having $N_R$=$N_E$=2, $\rho _1=0.7$, $\gamma _2=10$dB and $\eta _1=\eta _1=\eta _3=0.5$.\relax }}{112}{}%
+\addvspace {10\p@ }
+\contentsfinish 

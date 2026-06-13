@@ -1,0 +1,145 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: report.aux
+A level-1 auxiliary file: Initial_Pages/coverpage.aux
+A level-1 auxiliary file: Initial_Pages/blankpage.aux
+A level-1 auxiliary file: Initial_Pages/titlepage.aux
+A level-1 auxiliary file: Initial_Pages/title_back.aux
+A level-1 auxiliary file: Initial_Pages/certificate.aux
+Already encountered file Initial_Pages/blankpage.aux
+---line 7 of file report.aux
+ : \@input{Initial_Pages/blankpage.aux
+ :                                    }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: Initial_Pages/ackno.aux
+A level-1 auxiliary file: Initial_Pages/abstract.aux
+Already encountered file Initial_Pages/blankpage.aux
+---line 15 of file report.aux
+ : \@input{Initial_Pages/blankpage.aux
+ :                                    }
+I'm skipping whatever remains of this command
+A level-1 auxiliary file: chapters/chapter1.aux
+A level-1 auxiliary file: chapters/chapter2.aux
+A level-1 auxiliary file: chapters/chapter3.aux
+A level-1 auxiliary file: chapters/chapter4.aux
+A level-1 auxiliary file: chapters/chapter5.aux
+A level-1 auxiliary file: chapters/chapter6.aux
+A level-1 auxiliary file: chapters/chapter7.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated field_info (elt_size=4) to 10934 items from 5000.
+Database file #1: References.bib
+Repeated entry---line 536 of file References.bib
+ : @article{chopra2020secrecy
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 635 of file References.bib
+ : @article{zhang2013mimo
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 779 of file References.bib
+ : @inproceedings{varshney2008transporting
+ :                                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 859 of file References.bib
+ : @article{xiang2019physical
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 892 of file References.bib
+ : @article{si2018secrecy
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 948 of file References.bib
+ : @article{perera2017simultaneous
+ :                                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 987 of file References.bib
+ : @article{zhao2016secrecy
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1088 of file References.bib
+ : @article{zhou2013wireless
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1098 of file References.bib
+ : @article{zhang2013mimo
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1222 of file References.bib
+ : @article{elkashlan2014security
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1252 of file References.bib
+ : @article{elkashlan2014security
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1420 of file References.bib
+ : @article{jiang2015energy
+ :                         ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1468 of file References.bib
+ : @inproceedings{varshney2008transporting
+ :                                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1476 of file References.bib
+ : @article{zhang2013mimo
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1496 of file References.bib
+ : @article{lee2013opportunistic
+ :                              ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "zhao2017secrecy"
+Warning--I didn't find a database entry for "hu2015secrecy"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in mitola2002cognitive
+
+Done.
+You've used 127 entries,
+            4087 wiz_defined-function locations,
+            1473 strings with 32070 characters,
+and the built_in function-call counts, 117784 in all, are:
+= -- 9880
+> -- 2815
+< -- 1274
++ -- 1630
+- -- 462
+* -- 5756
+:= -- 16875
+add.period$ -- 276
+call.type$ -- 127
+change.case$ -- 127
+chr.to.int$ -- 2916
+cite$ -- 128
+duplicate$ -- 8082
+empty$ -- 8592
+format.name$ -- 549
+if$ -- 27664
+int.to.chr$ -- 0
+int.to.str$ -- 127
+missing$ -- 1293
+newline$ -- 404
+num.names$ -- 127
+pop$ -- 2665
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 9133
+stack$ -- 0
+substring$ -- 7075
+swap$ -- 7314
+text.length$ -- 302
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 127
+warning$ -- 1
+while$ -- 587
+width$ -- 130
+write$ -- 1338
+(There were 17 error messages)

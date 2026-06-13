@@ -1,0 +1,2409 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2021.10.16)  28 DEC 2021 15:20
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report.tex
+(./report.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18>
+(c:/texlive/2021/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2020/04/10 v1.4m Standard LaTeX document class
+(c:/texlive/2021/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(c:/texlive/2021/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box47
+\beforetitleunit=\skip49
+\aftertitleunit=\skip50
+\ttl@plus=\dimen139
+\ttl@minus=\dimen140
+\ttl@toksa=\toks15
+\titlewidth=\dimen141
+\titlewidthlast=\dimen142
+\titlewidthfirst=\dimen143
+)
+(c:/texlive/2021/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip51
+\LTright=\skip52
+\LTpre=\skip53
+\LTpost=\skip54
+\LTchunksize=\count188
+\LTcapwidth=\dimen144
+\LT@head=\box48
+\LT@firsthead=\box49
+\LT@foot=\box50
+\LT@lastfoot=\box51
+\LT@cols=\count189
+\LT@rows=\count190
+\c@LT@tables=\count191
+\c@LT@chunks=\count192
+\LT@p@ftn=\toks16
+)
+(c:/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(c:/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\captionmargin=\dimen145
+\captionmargin@=\dimen146
+\captionwidth=\dimen147
+\caption@tempdima=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count193
+\c@continuedfloat=\count194
+Package caption Info: longtable package is loaded.
+
+(c:/texlive/2021/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+))
+(c:/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen152
+\lightrulewidth=\dimen153
+\cmidrulewidth=\dimen154
+\belowrulesep=\dimen155
+\belowbottomsep=\dimen156
+\aboverulesep=\dimen157
+\abovetopsep=\dimen158
+\cmidrulesep=\dimen159
+\cmidrulekern=\dimen160
+\defaultaddspace=\dimen161
+\@cmidla=\count195
+\@cmidlb=\count196
+\@aboverulesep=\dimen162
+\@belowrulesep=\dimen163
+\@thisruleclass=\count197
+\@lastruleclass=\count198
+\@thisrulewidth=\dimen164
+)
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip55
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen165
+))
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen166
+)
+(c:/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count199
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count266
+\leftroot@=\count267
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count268
+\DOTSCASE@=\count269
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen167
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count270
+\c@MaxMatrixCols=\count271
+\dotsspace@=\muskip16
+\c@parentequation=\count272
+\dspbrk@lvl=\count273
+\tag@help=\toks19
+\row@=\count274
+\column@=\count275
+\maxfields@=\count276
+\andhelp@=\toks20
+\eqnshift@=\dimen168
+\alignsep@=\dimen169
+\tagshift@=\dimen170
+\tagwidth@=\dimen171
+\totwidth@=\dimen172
+\lineht@=\dimen173
+\@envbody=\toks21
+\multlinegap=\skip56
+\multlinetaggap=\skip57
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(c:/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+)))
+(c:/texlive/2021/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(c:/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(c:/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+)
+(c:/texlive/2021/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count277
+\sf@farskip=\skip58
+\sf@captopadj=\dimen176
+\sf@capskip=\skip59
+\sf@nearskip=\skip60
+\c@subfigure=\count278
+\c@subfigure@save=\count279
+\c@lofdepth=\count280
+\c@subtable=\count281
+\c@subtable@save=\count282
+\c@lotdepth=\count283
+\sf@top=\skip61
+\sf@bottom=\skip62
+)
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks23
+\pgfutil@tempdima=\dimen177
+\pgfutil@tempdimb=\dimen178
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
+) (c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks24
+\pgfkeys@temptoks=\toks25
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks26
+))
+\pgf@x=\dimen179
+\pgf@y=\dimen180
+\pgf@xa=\dimen181
+\pgf@ya=\dimen182
+\pgf@xb=\dimen183
+\pgf@yb=\dimen184
+\pgf@xc=\dimen185
+\pgf@yc=\dimen186
+\pgf@xd=\dimen187
+\pgf@yd=\dimen188
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count284
+\c@pgf@countb=\count285
+\c@pgf@countc=\count286
+\c@pgf@countd=\count287
+\t@pgf@toka=\toks27
+\t@pgf@tokb=\toks28
+\t@pgf@tokc=\toks29
+\pgf@sys@id@count=\count288
+ (c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count289
+\pgfsyssoftpath@bigbuffer@items=\count290
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (c:/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen189
+\pgfmath@count=\count291
+\pgfmath@box=\box55
+\pgfmath@toks=\toks30
+\pgfmath@stack@operand=\toks31
+\pgfmath@stack@operation=\toks32
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
+x)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric
+.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.t
+ex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.co
+de.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.te
+x)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
+etics.code.tex)))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count292
+))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen190
+\pgf@picmaxx=\dimen191
+\pgf@picminy=\dimen192
+\pgf@picmaxy=\dimen193
+\pgf@pathminx=\dimen194
+\pgf@pathmaxx=\dimen195
+\pgf@pathminy=\dimen196
+\pgf@pathmaxy=\dimen197
+\pgf@xx=\dimen198
+\pgf@xy=\dimen199
+\pgf@yx=\dimen256
+\pgf@yy=\dimen257
+\pgf@zx=\dimen258
+\pgf@zy=\dimen259
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
+e.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen260
+\pgf@path@lasty=\dimen261
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
+x
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen262
+\pgf@shorten@start@additional=\dimen263
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count293
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
+.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen264
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
+ode.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen265
+\pgf@pt@y=\dimen266
+\pgf@pt@temp=\dimen267
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.co
+de.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen268
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen269
+\pgf@sys@shading@range@num=\count294
+\pgf@shadingcount=\count295
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box59
+))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code
+.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (c:/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))) (c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.te
+x
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box60
+)
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
+y
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen270
+\pgf@nodesepend=\dimen271
+)
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
+y
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+)) (c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(c:/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen272
+\pgffor@skip=\dimen273
+\pgffor@stack=\toks33
+\pgffor@toks=\toks34
+))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
+de.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count296
+\pgfplotmarksize=\dimen274
+)
+\tikz@lastx=\dimen275
+\tikz@lasty=\dimen276
+\tikz@lastxsaved=\dimen277
+\tikz@lastysaved=\dimen278
+\tikz@lastmovetox=\dimen279
+\tikz@lastmovetoy=\dimen280
+\tikzleveldistance=\dimen281
+\tikzsiblingdistance=\dimen282
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count297
+\tikznumberofchildren=\count298
+\tikznumberofcurrentchild=\count299
+\tikz@fig@count=\count300
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count301
+\pgfmatrixcurrentcolumn=\count302
+\pgf@matrix@numberofcolumns=\count303
+)
+\tikz@expandcount=\count304
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+brarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
+braryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+
+(c:/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\arrowsize=\dimen283
+)) (c:/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+(c:/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2020/10/09 version 4.42 text color boxes
+
+(c:/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks35
+\verbatim@line=\toks36
+\verbatim@in@stream=\read3
+)
+(c:/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(c:/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(c:/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count305
+)
+\tcb@titlebox=\box65
+\tcb@upperbox=\box66
+\tcb@lowerbox=\box67
+\tcb@phantombox=\box68
+\c@tcbbreakpart=\count306
+\c@tcblayer=\count307
+\c@tcolorbox@number=\count308
+\tcb@temp=\box69
+\tcb@temp=\box70
+\tcb@temp=\box71
+\tcb@temp=\box72
+\tcb@out=\write4
+\tcb@record@out=\write5
+)
+(c:/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip63
+\multirow@cntb=\count309
+\multirow@dima=\skip64
+\bigstrutjot=\dimen284
+)
+(c:/texlive/2021/texmf-dist/tex/latex/paralist/paralist.sty
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip65
+\plpartopsep=\skip66
+\plitemsep=\skip67
+\plparsep=\skip68
+\pl@lab=\toks37
+)
+(c:/texlive/2021/texmf-dist/tex/latex/secdot/secdot.sty
+Package: secdot 2000/06/20 v1.0 section numbers with dots
+)
+(c:/texlive/2021/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(c:/texlive/2021/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count310
+\float@exts=\toks38
+\float@box=\box73
+\@float@everytoks=\toks39
+\@floatcapt=\box74
+)
+(c:/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks40
+\c@algorithm=\count311
+)
+(c:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+(c:/texlive/2021/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count312
+\c@ALG@rem=\count313
+\c@ALG@nested=\count314
+\ALG@tlm=\skip69
+\ALG@thistlm=\skip70
+\c@ALG@Lnr=\count315
+\c@ALG@blocknr=\count316
+\c@ALG@storecount=\count317
+\c@ALG@tmpcounter=\count318
+\ALG@tmplength=\skip71
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (c:/texlive/2021/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count319
+\c@@ppsavesec=\count320
+\c@@ppsaveapp=\count321
+)
+(c:/texlive/2021/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
+pages
+)
+(./IEEEtrantools.sty
+Package: IEEEtrantools 2015/08/26 V1.5 by Michael Shell
+
+-- See the "IEEEtrantools_doc.txt" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/tools/
+\@IEEEtrantmpdimenA=\dimen285
+\@IEEEtrantmpdimenB=\dimen286
+\@IEEEtrantmpdimenC=\dimen287
+\@IEEEtrantmpcountA=\count322
+\@IEEEtrantmpcountB=\count323
+\@IEEEtrantmpcountC=\count324
+\@IEEEtrantmptoksA=\toks41
+\IEEEnormaljot=\dimen288
+\IEEEquantizedlength=\dimen289
+\IEEEquantizedlengthdiff=\dimen290
+\IEEEquantizedtextheightdiff=\dimen291
+\IEEEilabelindentA=\dimen292
+\IEEEilabelindentB=\dimen293
+\IEEEilabelindent=\dimen294
+\IEEEelabelindent=\dimen295
+\IEEEdlabelindent=\dimen296
+\IEEElabelindent=\dimen297
+\IEEEiednormlabelsep=\dimen298
+\IEEEiedmathlabelsep=\dimen299
+\IEEEiedtopsep=\skip72
+\c@IEEEsubequation=\count325
+\@IEEEeqnnumcols=\count326
+\@IEEEeqncolcnt=\count327
+\@IEEEsubeqnnumrollback=\count328
+\IEEEPARstartletwidth=\dimen300
+) (c:/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count329
+\Gm@cntv=\count330
+\c@Gm@tempcnt=\count331
+\Gm@bindingoffset=\dimen301
+\Gm@wd@mp=\dimen302
+\Gm@odd@mp=\dimen303
+\Gm@even@mp=\dimen304
+\Gm@layoutwidth=\dimen305
+\Gm@layoutheight=\dimen306
+\Gm@layouthoffset=\dimen307
+\Gm@layoutvoffset=\dimen308
+\Gm@dimlist=\toks42
+)
+(c:/texlive/2021/texmf-dist/tex/latex/nomencl/nomencl.sty
+Package: nomencl 2020/12/29 v5.5 Nomenclature package
+
+(c:/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+
+(c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(c:/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks43
+\XKV@tempa@toks=\toks44
+)
+\XKV@depth=\count332
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(c:/texlive/2021/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2021/03/17 v3.33 KOMA-Script package (handling toc-files)
+
+(c:/texlive/2021/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2021/03/17 v3.33 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(c:/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2021/03/17 v3.33 KOMA-Script package (file load hooks)
+
+(c:/texlive/2021/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2021/03/17 v3.33 KOMA-Script package (using LaTeX hooks)
+
+
+LaTeX3 Info: Defining command \BeforeFile with sig. 'm' on line 61.
+
+
+LaTeX3 Info: Defining command \AfterFile with sig. 'm' on line 65.
+
+
+LaTeX3 Info: Defining command \BeforeClass with sig. 'm' on line 69.
+
+
+LaTeX3 Info: Defining command \BeforePackage with sig. 'm' on line 73.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfClass with sig. 'smo+m' on line 83.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfPackage with sig. 'smo+m' on line
+(LaTeX3)     93.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterClass with sig. 'smo+m' on line
+(LaTeX3)     173.
+
+
+LaTeX3 Info: Defining command \AfterClass with sig. '' on line 174.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterPackage with sig. 'smo+m' on line
+(LaTeX3)     191.
+
+
+LaTeX3 Info: Defining command \AfterPackage with sig. '' on line 192.
+
+
+LaTeX3 Info: Defining command \ReplaceInput with sig. '' on line 193.
+
+
+LaTeX3 Info: Defining command \ReplaceClass with sig. 'mm' on line 196.
+
+
+LaTeX3 Info: Defining command \ReplacePackage with sig. 'mm' on line 199.
+
+
+LaTeX3 Info: Defining command \UnReplaceInput with sig. '' on line 200.
+
+
+LaTeX3 Info: Defining command \UnReplaceClass with sig. 'm' on line 203.
+
+
+LaTeX3 Info: Defining command \UnReplacePackage with sig. 'mm' on line 206.
+
+
+LaTeX3 Info: Defining command \PreventPackageFromLoading with sig. 's+om' on
+(LaTeX3)     line 234.
+
+
+LaTeX3 Info: Defining command \StorePreventPackageFromLoading with sig. 'm' on
+(LaTeX3)     line 242.
+
+
+LaTeX3 Info: Defining command \ResetPreventPackageFromLoading with sig. '' on
+(LaTeX3)     line 247.
+
+
+LaTeX3 Info: Defining command \UnPreventPackageFromLoading with sig. 'sm' on
+(LaTeX3)     line 261.
+
+
+LaTeX3 Info: Defining command \BeforeClosingMainAux with sig. 'om' on line
+(LaTeX3)     274.
+
+
+LaTeX3 Info: Defining command \AfterReadingMainAux with sig. 'om' on line 287.
+
+
+LaTeX3 Info: Defining command \protected@immediate@write with sig. 'm+m+m' on
+(LaTeX3)     line 298.
+
+
+(c:/texlive/2021/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2021/03/17 v3.33 KOMA-Script package (logo)
+)))
+Skipping: [2021/05/01] Usage of raw option list on input line 252.
+Applying: [0000/00/00] compatibility for LaTeX before 2021/05/01 on input line 
+337.
+)
+\scr@dte@tocline@numberwidth=\skip73
+\scr@dte@tocline@numbox=\box75
+)
+Package tocbasic Info: babel extension for `nlo' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 187.
+Package tocbasic Info: babel extension for `nls' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 188.
+\nomlabelwidth=\dimen309
+\nom@tempdim=\dimen310
+\nomitemsep=\skip74
+)
+\@nomenclaturefile=\write6
+\openout6 = `report.nlo'.
+
+Package nomencl Info: Writing nomenclature file report.nlo on input line 78.
+
+(c:/texlive/2021/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen311
+\ESO@tempdimb=\dimen312
+)
+\c@lemma=\count333
+\c@theorem=\count334
+\c@corollary=\count335
+
+(c:/texlive/2021/texmf-dist/tex/latex/titlesec/titletoc.sty
+Package: titletoc 2019/10/16 v2.13 TOC entries
+\ttl@leftsep=\dimen313
+)
+(c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count336
+\l__pdf_internal_box=\box76
+)
+
+LaTeX Warning: Unused global option(s):
+    [timesnewroman].
+
+(./report.aux (./Initial_Pages/coverpage.aux) (./Initial_Pages/blankpage.aux)
+(./Initial_Pages/titlepage.aux) (./Initial_Pages/title_back.aux)
+(./Initial_Pages/certificate.aux) (./Initial_Pages/blankpage.aux)
+(./Initial_Pages/ackno.aux) (./Initial_Pages/abstract.aux)
+(./Initial_Pages/blankpage.aux) (./chapters/chapter1.aux)
+(./chapters/chapter2.aux) (./chapters/chapter3.aux) (./chapters/chapter4.aux
+
+LaTeX Warning: Label `fig:1' multiply defined.
+
+
+LaTeX Warning: Label `fig:2' multiply defined.
+
+) (./chapters/chapter5.aux
+
+LaTeX Warning: Label `final' multiply defined.
+
+) (./chapters/chapter6.aux
+
+LaTeX Warning: Label `fig:5' multiply defined.
+
+) (./chapters/chapter7.aux))
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 157.
+LaTeX Font Info:    ... okay on input line 157.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(c:/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count337
+\scratchdimen=\dimen314
+\scratchbox=\box77
+\nofMPsegments=\count338
+\nofMParguments=\count339
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count340
+\MPscratchDim=\dimen315
+\MPnumerator=\count341
+\makeMPintoPDFobject=\count342
+\everyMPtoPDFconversion=\toks46
+) (c:/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(108.12047pt, 418.25552pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=418.25552pt
+* \textheight=702.78308pt
+* \oddsidemargin=35.85048pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=85.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\openout2 = `Initial_Pages/coverpage.aux'.
+
+(./Initial_Pages/coverpage.tex
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <36> not available
+(Font)              size <24.88> substituted on input line 5.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <28> not available
+(Font)              size <24.88> substituted on input line 11.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 17.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <16> not available
+(Font)              size <17.28> substituted on input line 18.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 21.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 26.
+
+<Initial_Pages/logo/nithlogored.jpg, id=4, 1783.66376pt x 1739.49875pt>
+File: Initial_Pages/logo/nithlogored.jpg Graphic file (type jpg)
+<use Initial_Pages/logo/nithlogored.jpg>
+Package pdftex.def Info: Initial_Pages/logo/nithlogored.jpg  used on input line
+ 35.
+(pdftex.def)             Requested size: 145.85312pt x 142.26378pt.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <13.2> not available
+(Font)              size <12> substituted on input line 38.
+
+) [1
+
+
+{c:/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./Initial_Pages
+/logo/nithlogored.jpg>]
+\openout2 = `Initial_Pages/blankpage.aux'.
+
+ (./Initial_Pages/blankpage.tex
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+
+(c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)) [2
+
+
+
+]
+\openout2 = `Initial_Pages/titlepage.aux'.
+
+
+(./Initial_Pages/titlepage.tex
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <26> not available
+(Font)              size <24.88> substituted on input line 4.
+
+File: Initial_Pages/logo/nithlogored.jpg Graphic file (type jpg)
+<use Initial_Pages/logo/nithlogored.jpg>
+Package pdftex.def Info: Initial_Pages/logo/nithlogored.jpg  used on input line
+ 58.
+(pdftex.def)             Requested size: 116.67705pt x 113.81102pt.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <12.5> not available
+(Font)              size <12> substituted on input line 66.
+
+) [3
+
+
+
+]
+\openout2 = `Initial_Pages/title_back.aux'.
+
+ (./Initial_Pages/title_back.tex) [4
+
+
+
+]
+\openout2 = `Initial_Pages/certificate.aux'.
+
+ (./Initial_Pages/certificate.tex
+<Initial_Pages/logo/letterhead.png, id=24, 593.21625pt x 130.086pt>
+File: Initial_Pages/logo/letterhead.png Graphic file (type png)
+<use Initial_Pages/logo/letterhead.png>
+Package pdftex.def Info: Initial_Pages/logo/letterhead.png  used on input line 
+9.
+(pdftex.def)             Requested size: 418.25552pt x 91.72253pt.
+)
+[5
+
+
+
+ <./Initial_Pages/logo/letterhead.png>]
+\openout2 = `Initial_Pages/blankpage.aux'.
+
+ (./Initial_Pages/blankpage.tex)
+[6
+
+
+
+]
+\openout2 = `Initial_Pages/ackno.aux'.
+
+ (./Initial_Pages/ackno.tex
+Underfull \vbox (badness 1776) has occurred while \output is active []
+
+ [1
+
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+) [2]
+\openout2 = `Initial_Pages/abstract.aux'.
+
+ (./Initial_Pages/abstract.tex
+Underfull \vbox (badness 4217) has occurred while \output is active []
+
+ [3
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4])
+[5] [6
+
+
+
+] (./report.toc [7] [8]
+Overfull \hbox (2.03766pt too wide) detected at line 79
+ \OT1/cmr/bx/n/12 113
+ []
+
+
+Overfull \hbox (2.03766pt too wide) detected at line 81
+ \OT1/cmr/bx/n/12 117
+ []
+
+)
+\tf@toc=\write7
+\openout7 = `report.toc'.
+
+ [9] [10
+
+] (./report.lof [11]
+Overfull \hbox (21.24402pt too wide) in paragraph at lines 37--37
+ [][] []\OT1/cmr/m/n/12 intercept prob-a-bil-ity/SOP v/s $\OML/cmm/m/it/12 ^^M[
+]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 dB\OT1/cmr/m/n/12 )$ for vary-ing $\OML/cmm/
+m/it/12 N[]$ \OT1/cmr/m/n/12 hav-ing $\OML/cmm/m/it/12 N[]$\OT1/cmr/m/n/12 =$\O
+ML/cmm/m/it/12 N[]$\OT1/cmr/m/n/12 =2, 
+ []
+
+)
+\tf@lof=\write8
+\openout8 = `report.lof'.
+
+ [12] (./report.lot)
+\tf@lot=\write9
+\openout9 = `report.lot'.
+
+ (./report.nls [13
+
+] [14
+
+] [15] [16]) [17]
+\openout2 = `Initial_Pages/blankpage.aux'.
+
+
+(./Initial_Pages/blankpage.tex) [18
+
+]
+\openout2 = `chapters/chapter1.aux'.
+
+ (./chapters/chapter1.tex
+Chapter 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+
+]
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+ [2]
+<Figures/c1/spectrum hole.png, id=105, 478.78876pt x 280.04625pt>
+File: Figures/c1/spectrum hole.png Graphic file (type png)
+<use Figures/c1/spectrum hole.png>
+Package pdftex.def Info: Figures/c1/spectrum hole.png  used on input line 61.
+(pdftex.def)             Requested size: 418.25552pt x 244.64244pt.
+
+Underfull \vbox (badness 1394) has occurred while \output is active []
+
+ [3 <./Figures/c1/spectrum hole.png>] [4]
+<Figures/c1/sp.png, id=117, 526.96875pt x 280.04625pt>
+File: Figures/c1/sp.png Graphic file (type png)
+<use Figures/c1/sp.png>
+Package pdftex.def Info: Figures/c1/sp.png  used on input line 83.
+(pdftex.def)             Requested size: 418.25552pt x 222.2853pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--87
+
+ []
+
+[5 <./Figures/c1/sp.PNG>] [6] [7]
+Overfull \hbox (2.52199pt too wide) in paragraph at lines 106--106
+ |[]\OT1/cmr/bx/n/20.74 Applications of Cog-ni-tive Ra-dio Net-
+ []
+
+[8] [9]
+Underfull \vbox (badness 1735) has occurred while \output is active []
+
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
+
+ []
+
+[11] [12]
+Underfull \vbox (badness 7759) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14]
+[15] [16]) [17]
+\openout2 = `chapters/chapter2.aux'.
+
+ (./chapters/chapter2.tex [18
+
+
+
+
+]
+Chapter 2.
+
+Underfull \vbox (badness 4995) has occurred while \output is active []
+
+ [19]
+Underfull \vbox (badness 6047) has occurred while \output is active []
+
+ [20]
+<Figures/c1/wiretap channel.png, id=170, 307.1475pt x 153.57375pt>
+File: Figures/c1/wiretap channel.png Graphic file (type png)
+<use Figures/c1/wiretap channel.png>
+Package pdftex.def Info: Figures/c1/wiretap channel.png  used on input line 27.
+
+(pdftex.def)             Requested size: 418.25552pt x 209.14107pt.
+
+[21 <./Figures/c1/wiretap channel.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--53
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23]
+Underfull \vbox (badness 7722) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+ [25]
+[26]
+Overfull \hbox (1.85666pt too wide) in paragraph at lines 83--107
+ [] 
+ []
+
+[27
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28
+
+]
+[29]
+Underfull \hbox (badness 3601) in paragraph at lines 130--130
+[]\OT1/cmr/m/n/10.95 Maximal Ra-tio Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--133
+[]\OT1/cmr/m/n/10.95 Duc-Dung Tran,
+ []
+
+
+Underfull \hbox (badness 6893) in paragraph at lines 133--133
+\OT1/cmr/m/n/10.95 Dac-Binh Ha, Vu
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 133--133
+\OT1/cmr/m/n/10.95 Tran-Ha and Een-
+ []
+
+
+Underfull \hbox (badness 2205) in paragraph at lines 133--133
+[]\OT1/cmr/m/n/10.95 Maximal Ra-dio Com-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\OT1/cmr/m/n/10.95 Elka-sh-lan, Jing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+\OT1/cmr/m/n/10.95 Huang, Robert
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--136
+[]\OT1/cmr/m/n/10.95 Generalized Se-lec-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--139
+[]\OT1/cmr/m/n/10.95 Generalized Se-lec-tion
+ []
+
+
+Underfull \hbox (badness 6758) in paragraph at lines 142--142
+\OT1/cmr/m/n/10.95 Ju-lian Cheng and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+[]\OT1/cmr/m/n/10.95 Selection Com-bin-ing
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 142--142
+\OT1/cmr/m/n/10.95 (SC), Max-i-mal Ra-tio
+ []
+
+
+Underfull \hbox (badness 4096) in paragraph at lines 142--142
+\OT1/cmr/m/n/10.95 Com-bin-ing(MRC) and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--142
+\OT1/cmr/m/n/10.95 Equal-ize Gen-er-al-ized
+ []
+
+
+LaTeX Warning: Float too large for page by 50.86378pt on input line 150.
+
+[30]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 170--172
+
+ []
+
+[32] [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+
+Package caption Warning: \label without proper reference on input line 230.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:imperfect CSI' on page 35 undefined on input li
+ne 195.
+
+[35]
+Underfull \hbox (badness 1953) in paragraph at lines 204--204
+[]\OT1/cmr/bx/n/10.95 Year and Ref-er-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+[]\OT1/cmr/m/n/10.95 Hongjiang Lei , Jian-ming
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+\OT1/cmr/m/n/10.95 Zhang, Ki-Hong Park, Im-ran
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 215--216
+[]\OT1/cmr/m/n/10.95 Tinghan Yang, Rongqing Zhang,
+ []
+
+
+Underfull \hbox (badness 2662) in paragraph at lines 219--219
+[]\OT1/cmr/m/n/10.95 Tingnan Bao Hong-Chuan Yang
+ []
+
+
+LaTeX Warning: Float too large for page by 56.30363pt on input line 232.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[36]
+Underfull \vbox (badness 2293) has occurred while \output is active []
+
+ [37
+
+
+]
+Overfull \hbox (2.88731pt too wide) in paragraph at lines 244--244
+ |[]\OT1/cmr/bx/n/14.4 Simultaneous Wire-less In-for-ma-tion and Power Trans-
+ []
+
+<Figures/c1/seprate achitecture.jpg, id=231, 384.6872pt x 204.765pt>
+File: Figures/c1/seprate achitecture.jpg Graphic file (type jpg)
+<use Figures/c1/seprate achitecture.jpg>
+Package pdftex.def Info: Figures/c1/seprate achitecture.jpg  used on input line
+ 250.
+(pdftex.def)             Requested size: 292.77759pt x 155.8542pt.
+[38]
+<Figures/c1/Time Switching.jpg, id=235, 441.90094pt x 198.7425pt>
+File: Figures/c1/Time Switching.jpg Graphic file (type jpg)
+<use Figures/c1/Time Switching.jpg>
+Package pdftex.def Info: Figures/c1/Time Switching.jpg  used on input line 268.
+
+(pdftex.def)             Requested size: 292.77759pt x 131.67992pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--272
+
+ []
+
+[39 <./Figures/c1/seprate achitecture.JPG>]
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+<Figures/c1/Power Architecture.jpg, id=239, 494.59781pt x 204.01219pt>
+File: Figures/c1/Power Architecture.jpg Graphic file (type jpg)
+<use Figures/c1/Power Architecture.jpg>
+Package pdftex.def Info: Figures/c1/Power Architecture.jpg  used on input line 
+287.
+(pdftex.def)             Requested size: 292.77759pt x 120.7646pt.
+<Figures/c1/anshu 4.jpg, id=240, 470.50781pt x 217.5628pt>
+File: Figures/c1/anshu 4.jpg Graphic file (type jpg)
+<use Figures/c1/anshu 4.jpg>
+Package pdftex.def Info: Figures/c1/anshu 4.jpg  used on input line 295.
+(pdftex.def)             Requested size: 292.77759pt x 135.38217pt.
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+ [40 <./Figures/c1/Time Switching.JPG>]
+
+Package caption Warning: \label without proper reference on input line 336.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:TS and PS' on page 41 undefined on input line 3
+03.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 310--310
+[]\OT1/cmr/m/n/10.95 Architecture at
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 312--312
+\OT1/cmr/m/n/10.95 and Qin Ji-ayin,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+[]\OT1/cmr/m/n/10.95 Both Time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+\OT1/cmr/m/n/10.95 Switch-ing and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+[]\OT1/cmr/m/n/10.95 MISO chan-nel
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+\OT1/cmr/m/n/10.95 hav-ing mul-ti-ple
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+\OT1/cmr/m/n/10.95 trans-mit-ter and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--313
+[]\OT1/cmr/m/n/10.95 To max-i-mize the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+[]\OT1/cmr/m/n/10.95 Shiyang Leng,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\OT1/cmr/m/n/10.95 Der-rick Wing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\OT1/cmr/m/n/10.95 Kwan Ng,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+\OT1/cmr/m/n/10.95 and Robert
+ []
+
+
+Underfull \hbox (badness 1867) in paragraph at lines 315--316
+\OT1/cmr/m/n/10.95 static block fad-ing is
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 316--317
+\OT1/cmr/m/n/10.95 to min-i-mize the to-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[]\OT1/cmr/m/n/10.95 Chao Shen,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+\OT1/cmr/m/n/10.95 Wei-Chiang Li
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+\OT1/cmr/m/n/10.95 and Tsung-Hui
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+[]\OT1/cmr/m/n/10.95 In this case
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+\OT1/cmr/m/n/10.95 multi-user
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 318--318
+\OT1/cmr/m/n/10.95 MIMO/MISO
+ []
+
+
+Underfull \hbox (badness 1107) in paragraph at lines 318--319
+\OT1/cmr/m/n/10.95 to min-i-mize the to-tal
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
+[]\OT1/cmr/m/n/10.95 Derrick Wing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
+[]\OT1/cmr/m/n/10.95 MISO sys-tem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
+\OT1/cmr/m/n/10.95 with point to
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
+\OT1/cmr/m/n/10.95 point com-mu-
+ []
+
+
+Underfull \hbox (badness 2744) in paragraph at lines 321--321
+\OT1/cmr/m/n/10.95 ni-ca-tion is used
+ []
+
+
+Underfull \hbox (badness 3281) in paragraph at lines 321--321
+\OT1/cmr/m/n/10.95 with quasi-static
+ []
+
+
+Underfull \hbox (badness 6063) in paragraph at lines 321--322
+[]\OT1/cmr/m/n/10.95 There is a trade-off
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 321--322
+\OT1/cmr/m/n/10.95 be-tween en-ergy and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+[]\OT1/cmr/m/n/10.95 Ali Mo-ham-mad
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+\OT1/cmr/m/n/10.95 Fouladgar, and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+\OT1/cmr/m/n/10.95 Os-valdo Sime-
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 323--323
+[]\OT1/cmr/m/n/10.95 Integrated Time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+\OT1/cmr/m/n/10.95 switch-ing and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 323--323
+\OT1/cmr/m/n/10.95 point to point
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 326--326
+[]\OT1/cmr/m/n/10.95 Liang Liu, Rui
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 326--326
+\OT1/cmr/m/n/10.95 Zhang and Kee-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 326--326
+[]\OT1/cmr/m/n/10.95 Point to point
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+[]\OT1/cmr/m/n/10.95 Xiangyun
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+[]\OT1/cmr/m/n/10.95 SISO/MISO
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 328--328
+\OT1/cmr/m/n/10.95 chan-nels are
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+[]\OT1/cmr/m/n/10.95 Derrick Wing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+\OT1/cmr/m/n/10.95 Kwan Ng
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+\OT1/cmr/m/n/10.95 and Robert
+ []
+
+
+Underfull \hbox (badness 1342) in paragraph at lines 331--331
+[]\OT1/cmr/m/n/10.95 The SISO in-ter-
+ []
+
+
+Underfull \hbox (badness 2689) in paragraph at lines 331--332
+\OT1/cmr/m/n/10.95 for-ma-tion and en-ergy
+ []
+
+[41 <./Figures/c1/Power Architecture.JPG> <./Figures/c1/anshu 4.JPG>]
+
+Package caption Warning: \label without proper reference on input line 336.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `table:TS and PS' on page 42 undefined on input line 3
+40.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44])
+[45] [46]
+\openout2 = `chapters/chapter3.aux'.
+
+ (./chapters/chapter3.tex
+Chapter 3.
+
+Overfull \hbox (19.83702pt too wide) in paragraph at lines 3--3
+|\OT1/cmr/bx/n/24.88 Secrecy Per-for-mance of Per-fect/ Im-
+ []
+
+
+Underfull \vbox (badness 1635) has occurred while \output is active []
+
+ [47
+
+
+
+
+]
+[48]
+<Figures/c3/11-1.png, id=269, 1505.625pt x 1129.21875pt>
+File: Figures/c3/11-1.png Graphic file (type png)
+<use Figures/c3/11-1.png>
+Package pdftex.def Info: Figures/c3/11-1.png  used on input line 52.
+(pdftex.def)             Requested size: 376.42741pt x 282.32123pt.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 53.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 53.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 53.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 53.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49]
+Overfull \hbox (3.19691pt too wide) in paragraph at lines 79--81
+\OT1/cmr/m/n/12 In this $\OML/cmm/m/it/12 ^^M[] \OT1/cmr/m/n/12 = []$, $\OML/cm
+m/m/it/12 ^^M[] \OT1/cmr/m/n/12 = []$, $\OML/cmm/m/it/12 X \OT1/cmr/m/n/12 = \O
+ML/cmm/m/it/12 K[]$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 Y[] \OT1/cmr/m/n/12 = []
+\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 K[]i\OMS/cmsy/m/n/12 j[]$ \OT1/cmr/m/n/12 an
+d $\OML/cmm/m/it/12 Y[] \OT1/cmr/m/n/12 = []\OMS/cmsy/m/n/12 j\OML/cmm/m/it/12 
+K[]j\OMS/cmsy/m/n/12 j[]$\OT1/cmr/m/n/12 . 
+ []
+
+[50 <./Figures/c3/11-1.png>]
+Underfull \vbox (badness 6078) has occurred while \output is active []
+
+ [51]
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+Overfull \hbox (5.62547pt too wide) detected at line 180
+\OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 Pr\OT1/cmr/m/n/12 (\OML
+/cmm/m/it/12 R[] < C[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 Pr\OT1/cmr/m/n/12 (\
+OML/cmm/m/it/12 ^^M[] \OMS/cmsy/m/n/12 ^^U \OML/cmm/m/it/12 ^^M[]\OT1/cmr/m/n/1
+2 ) + \OML/cmm/m/it/12 Pr\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^M[] \OMS/cmsy/m/n/
+12 ^^T \OML/cmm/m/it/12 ^^M[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 Pr\OT1/cmr/m/n/1
+2 (\OML/cmm/m/it/12 C[] < R[] ^^M[] > ^^M[]\OT1/cmr/m/n/12 )
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 5008) has occurred while \output is active []
+
+ [55]
+[56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+Package epstopdf Info: Source file: <Figures/c3/ne.eps>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 30540 bytes
+(epstopdf)             Output file: <Figures/c3/ne-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 16041 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c3/ne-eps-converte
+d-to.pdf Figures/c3/ne.eps>
+(epstopdf)             \includegraphics on input line 363.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c3/ne-eps-converted-to.pdf, id=307, 521.95pt x 338.26375pt>
+File: Figures/c3/ne-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c3/ne-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c3/ne-eps-converted-to.pdf  used on input line
+ 363.
+(pdftex.def)             Requested size: 418.25552pt x 271.06557pt.
+Package epstopdf Info: Source file: <Figures/c3/sss.eps>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 29106 bytes
+(epstopdf)             Output file: <Figures/c3/sss-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 15559 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c3/sss-eps-convert
+ed-to.pdf Figures/c3/sss.eps>
+(epstopdf)             \includegraphics on input line 372.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c3/sss-eps-converted-to.pdf, id=308, 521.95pt x 338.26375pt>
+File: Figures/c3/sss-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c3/sss-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c3/sss-eps-converted-to.pdf  used on input lin
+e 372.
+(pdftex.def)             Requested size: 418.25552pt x 271.06557pt.
+Package epstopdf Info: Source file: <Figures/c3/int.eps>
+(epstopdf)                    date: 2021-04-04 09:52:33
+(epstopdf)                    size: 25904 bytes
+(epstopdf)             Output file: <Figures/c3/int-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:33
+(epstopdf)                    size: 18049 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c3/int-eps-convert
+ed-to.pdf Figures/c3/int.eps>
+(epstopdf)             \includegraphics on input line 378.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Figures/c3/int-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figures/c3/int-eps-converted-to.pdf, id=309, 767.86874pt x 442.65375pt>
+File: Figures/c3/int-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c3/int-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c3/int-eps-converted-to.pdf  used on input lin
+e 378.
+(pdftex.def)             Requested size: 418.25552pt x 241.11655pt.
+[59]
+<Figures/c3/1.png, id=313, 312.56775pt x 258.9675pt>
+File: Figures/c3/1.png Graphic file (type png)
+<use Figures/c3/1.png>
+Package pdftex.def Info: Figures/c3/1.png  used on input line 390.
+(pdftex.def)             Requested size: 376.42741pt x 311.8777pt.
+
+Underfull \vbox (badness 2173) has occurred while \output is active []
+
+ [60 <./Figures/c3/ne-eps-converted-to.pdf>] [61 <./Figures/c3/sss-eps-converte
+d-to.pdf> <./Figures/c3/int-eps-converted-to.pdf>]
+<Figures/c3/22.png, id=354, 423.08063pt x 287.57437pt>
+File: Figures/c3/22.png Graphic file (type png)
+<use Figures/c3/22.png>
+Package pdftex.def Info: Figures/c3/22.png  used on input line 398.
+(pdftex.def)             Requested size: 376.42741pt x 255.87018pt.
+<Figures/c3/2(2).png, id=355, 370.986pt x 262.581pt>
+File: Figures/c3/2(2).png Graphic file (type png)
+<use Figures/c3/2(2).png>
+Package pdftex.def Info: Figures/c3/2(2).png  used on input line 409.
+(pdftex.def)             Requested size: 355.51974pt x 251.64215pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62 <./Figures/c3/1.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63 <./Figures/c3/22.png>]) [64 <./Figures/c3/2(2).png>]
+\openout2 = `chapters/chapter4.aux'.
+
+ (./chapters/chapter4.tex
+Chapter 4.
+[65
+
+
+
+
+]
+<Figures/c4/Untitled Diagram.png, id=369, 552.0625pt x 402.50375pt>
+File: Figures/c4/Untitled Diagram.png Graphic file (type png)
+<use Figures/c4/Untitled Diagram.png>
+Package pdftex.def Info: Figures/c4/Untitled Diagram.png  used on input line 34
+.
+(pdftex.def)             Requested size: 418.25552pt x 304.9602pt.
+ [66]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [67 <./Figures/c4/Untitled Diagram.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [68]
+
+Package amsmath Warning: Cannot use `split' here;
+(amsmath)                trying to recover with `aligned' on input line 122.
+
+
+Overfull \hbox (26.74669pt too wide) detected at line 124
+\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^M[]\OT1/cmr/m/n/12 ) = 
+[]  []
+ []
+
+
+Overfull \hbox (20.55556pt too wide) detected at line 159
+[]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+Overfull \hbox (69.24564pt too wide) detected at line 172
+\OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 = [] [] [] []
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
+Package epstopdf Info: Source file: <Figures/c4/atnt1.eps>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 24917 bytes
+(epstopdf)             Output file: <Figures/c4/atnt1-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 17378 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c4/atnt1-eps-conve
+rted-to.pdf Figures/c4/atnt1.eps>
+(epstopdf)             \includegraphics on input line 306.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c4/atnt1-eps-converted-to.pdf, id=393, 395.4775pt x 312.16624pt>
+File: Figures/c4/atnt1-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c4/atnt1-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c4/atnt1-eps-converted-to.pdf  used on input l
+ine 306.
+(pdftex.def)             Requested size: 313.69164pt x 247.61368pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1694) has occurred while \output is active []
+
+ [73]
+Package epstopdf Info: Source file: <Figures/c4/a5alpha5.eps>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 15656 bytes
+(epstopdf)             Output file: <Figures/c4/a5alpha5-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 10225 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c4/a5alpha5-eps-co
+nverted-to.pdf Figures/c4/a5alpha5.eps>
+(epstopdf)             \includegraphics on input line 315.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c4/a5alpha5-eps-converted-to.pdf, id=398, 392.46625pt x 312.16624pt>
+File: Figures/c4/a5alpha5-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c4/a5alpha5-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c4/a5alpha5-eps-converted-to.pdf  used on inpu
+t line 315.
+(pdftex.def)             Requested size: 313.69164pt x 249.52374pt.
+Package epstopdf Info: Source file: <Figures/c4/k11.eps>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 22035 bytes
+(epstopdf)             Output file: <Figures/c4/k11-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 12878 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c4/k11-eps-convert
+ed-to.pdf Figures/c4/k11.eps>
+(epstopdf)             \includegraphics on input line 322.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c4/k11-eps-converted-to.pdf, id=399, 434.62375pt x 323.2075pt>
+File: Figures/c4/k11-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c4/k11-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c4/k11-eps-converted-to.pdf  used on input lin
+e 322.
+(pdftex.def)             Requested size: 313.69164pt x 233.29117pt.
+Package epstopdf Info: Source file: <Figures/c4/a2gama2.eps>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 26807 bytes
+(epstopdf)             Output file: <Figures/c4/a2gama2-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 16364 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c4/a2gama2-eps-con
+verted-to.pdf Figures/c4/a2gama2.eps>
+(epstopdf)             \includegraphics on input line 329.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c4/a2gama2-eps-converted-to.pdf, id=400, 455.7025pt x 312.16624pt>
+File: Figures/c4/a2gama2-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c4/a2gama2-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c4/a2gama2-eps-converted-to.pdf  used on input
+ line 329.
+(pdftex.def)             Requested size: 313.69164pt x 214.89003pt.
+Package epstopdf Info: Source file: <Figures/c4/a3ne3.eps>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 25447 bytes
+(epstopdf)             Output file: <Figures/c4/a3ne3-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:34
+(epstopdf)                    size: 18471 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c4/a3ne3-eps-conve
+rted-to.pdf Figures/c4/a3ne3.eps>
+(epstopdf)             \includegraphics on input line 336.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c4/a3ne3-eps-converted-to.pdf, id=401, 419.5675pt x 312.16624pt>
+File: Figures/c4/a3ne3-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c4/a3ne3-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c4/a3ne3-eps-converted-to.pdf  used on input l
+ine 336.
+(pdftex.def)             Requested size: 313.69164pt x 233.39056pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1097) has occurred while \output is active []
+
+ [74 <./Figures/c4/atnt1-eps-converted-to.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [75 <./Figures/c4/a5alpha5-eps-converted-to.pdf>] [76 <./Figures/c4/k11-eps-c
+onverted-to.pdf>] [77 <./Figures/c4/a2gama2-eps-converted-to.pdf> <./Figures/c4
+/a3ne3-eps-converted-to.pdf>]
+\openout2 = `chapters/chapter5.aux'.
+
+ (./chapters/chapter5.tex [78
+
+
+
+
+]
+Chapter 5.
+
+Overfull \hbox (10.51852pt too wide) in paragraph at lines 3--3
+\OT1/cmr/bx/n/24.88 ni-tive Ra-dio Net-works with SWIPT
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
+
+ []
+
+[79] [80]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+
+LaTeX Warning: Citation `zhao2017secrecy' on page 85 undefined on input line 19
+9.
+
+
+LaTeX Warning: Citation `zhao2017secrecy' on page 85 undefined on input line 22
+9.
+
+[85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+Package epstopdf Info: Source file: <Figures/c5/a1nr.eps>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 94049 bytes
+(epstopdf)             Output file: <Figures/c5/a1nr-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 25742 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c5/a1nr-eps-conver
+ted-to.pdf Figures/c5/a1nr.eps>
+(epstopdf)             \includegraphics on input line 313.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c5/a1nr-eps-converted-to.pdf, id=493, 511.9125pt x 297.11pt>
+File: Figures/c5/a1nr-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c5/a1nr-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c5/a1nr-eps-converted-to.pdf  used on input li
+ne 313.
+(pdftex.def)             Requested size: 418.25552pt x 242.75226pt.
+<Figures/c5/22.pdf, id=494, 845.1575pt x 597.23125pt>
+File: Figures/c5/22.pdf Graphic file (type pdf)
+<use Figures/c5/22.pdf>
+Package pdftex.def Info: Figures/c5/22.pdf  used on input line 319.
+(pdftex.def)             Requested size: 418.25552pt x 295.57114pt.
+Package epstopdf Info: Source file: <Figures/c5/rhona.eps>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 16614 bytes
+(epstopdf)             Output file: <Figures/c5/rhona-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 11001 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c5/rhona-eps-conve
+rted-to.pdf Figures/c5/rhona.eps>
+(epstopdf)             \includegraphics on input line 325.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c5/rhona-eps-converted-to.pdf, id=495, 382.42876pt x 284.06125pt>
+File: Figures/c5/rhona-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c5/rhona-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c5/rhona-eps-converted-to.pdf  used on input l
+ine 325.
+(pdftex.def)             Requested size: 418.25552pt x 310.68686pt.
+Package epstopdf Info: Source file: <Figures/c5/11.eps>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 64755 bytes
+(epstopdf)             Output file: <Figures/c5/11-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:35
+(epstopdf)                    size: 14747 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c5/11-eps-converte
+d-to.pdf Figures/c5/11.eps>
+(epstopdf)             \includegraphics on input line 331.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Figures/c5/11-eps-converted-to.pdf): PDF i
+nclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figures/c5/11-eps-converted-to.pdf, id=496, 511.9125pt x 297.11pt>
+File: Figures/c5/11-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c5/11-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c5/11-eps-converted-to.pdf  used on input line
+ 331.
+(pdftex.def)             Requested size: 418.25552pt x 242.75226pt.
+[87] [88 <./Figures/c5/a1nr-eps-converted-to.pdf> <./Figures/c5/22.pdf>]
+[89 <./Figures/c5/rhona-eps-converted-to.pdf> <./Figures/c5/11-eps-converted-to
+.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 342--347
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [90])
+[91]
+\openout2 = `chapters/chapter6.aux'.
+
+ (./chapters/chapter6.tex [92
+
+
+
+
+]
+Chapter 6.
+
+Overfull \hbox (14.81197pt too wide) in paragraph at lines 3--3
+\OT1/cmr/bx/n/24.88 An-tenna Se-lec-tion and Sub-Optimal
+ []
+
+[93]
+Underfull \hbox (badness 10000) in paragraph at lines 17--25
+
+ []
+
+
+Underfull \vbox (badness 6047) has occurred while \output is active []
+
+ [94]
+
+LaTeX Warning: Citation `hu2015secrecy' on page 95 undefined on input line 28.
+
+
+Underfull \vbox (badness 1496) has occurred while \output is active []
+
+ [95]
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [96]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [97]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [98]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [100]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [101]
+Overfull \hbox (15.8571pt too wide) in alignment at lines 259--267
+ [][][] []
+ []
+
+
+Overfull \hbox (15.35393pt too wide) in paragraph at lines 267--278
+\OT1/cmr/m/n/12 where, $\OML/cmm/m/it/12 ^^S[] \OT1/cmr/m/n/12 = (\OMS/cmsy/m/n
+/12 ^^@\OT1/cmr/m/n/12 1)[] [][]([])[] [][] [] (2[] \OMS/cmsy/m/n/12 ^^@ \OT1/c
+mr/m/n/12 1)[]$, $\OML/cmm/m/it/12 ^^S[] \OT1/cmr/m/n/12 = [][] [] (2[])[]$
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [102]
+Overfull \hbox (75.54576pt too wide) in paragraph at lines 308--320
+\OT1/cmr/m/n/12 where, $\OML/cmm/m/it/12 u[] \OT1/cmr/m/n/12 = [][] [][] [] [] 
+[]$ $\OML/cmm/m/it/12 u[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 e[] [][] [][]$\OT1
+/cmr/m/n/12 , 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [103]
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
+
+
+Overfull \hbox (16.49815pt too wide) in paragraph at lines 388--400
+\OT1/cmr/m/n/12 where,$\OML/cmm/m/it/12 g[] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12
+ N[]\OT1/cmr/m/n/12 )[] [][] [] [][]$ and $\OML/cmm/m/it/12 g[] \OT1/cmr/m/n/12
+ = [][] [][] [] []$ 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+Overfull \hbox (6.60025pt too wide) in paragraph at lines 407--415
+\OT1/cmr/m/n/12 where,$\OML/cmm/m/it/12 g[] \OT1/cmr/m/n/12 = [][] [] []$, $\OM
+L/cmm/m/it/12 g[] \OT1/cmr/m/n/12 = [][] [][] [] (2[])$, $\OML/cmm/m/it/12 g[] 
+\OT1/cmr/m/n/12 = [][] 
+ []
+
+
+Underfull \vbox (badness 4193) has occurred while \output is active []
+
+ [105]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [106]
+Package epstopdf Info: Source file: <Figures/c6/imp.eps>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 30036 bytes
+(epstopdf)             Output file: <Figures/c6/imp-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 22930 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c6/imp-eps-convert
+ed-to.pdf Figures/c6/imp.eps>
+(epstopdf)             \includegraphics on input line 475.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex.exe (file ./Figures/c6/imp-eps-converted-to.pdf): PDF 
+inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figures/c6/imp-eps-converted-to.pdf, id=582, 767.86874pt x 442.65375pt>
+File: Figures/c6/imp-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c6/imp-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c6/imp-eps-converted-to.pdf  used on input lin
+e 475.
+(pdftex.def)             Requested size: 355.51974pt x 204.94704pt.
+Package epstopdf Info: Source file: <Figures/c6/mrc.eps>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 32653 bytes
+(epstopdf)             Output file: <Figures/c6/mrc-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 17953 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c6/mrc-eps-convert
+ed-to.pdf Figures/c6/mrc.eps>
+(epstopdf)             \includegraphics on input line 482.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c6/mrc-eps-converted-to.pdf, id=583, 767.86874pt x 442.65375pt>
+File: Figures/c6/mrc-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c6/mrc-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c6/mrc-eps-converted-to.pdf  used on input lin
+e 482.
+(pdftex.def)             Requested size: 355.51974pt x 204.94704pt.
+Package epstopdf Info: Source file: <Figures/c6/rho6new.eps>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 48256 bytes
+(epstopdf)             Output file: <Figures/c6/rho6new-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 28107 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c6/rho6new-eps-con
+verted-to.pdf Figures/c6/rho6new.eps>
+(epstopdf)             \includegraphics on input line 492.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c6/rho6new-eps-converted-to.pdf, id=584, 767.86874pt x 442.65375pt>
+File: Figures/c6/rho6new-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c6/rho6new-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c6/rho6new-eps-converted-to.pdf  used on input
+ line 492.
+(pdftex.def)             Requested size: 355.51974pt x 204.94704pt.
+Package epstopdf Info: Source file: <Figures/c6/5.eps>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 30087 bytes
+(epstopdf)             Output file: <Figures/c6/5-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 15936 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c6/5-eps-converted
+-to.pdf Figures/c6/5.eps>
+(epstopdf)             \includegraphics on input line 498.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c6/5-eps-converted-to.pdf, id=585, 767.86874pt x 442.65375pt>
+File: Figures/c6/5-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c6/5-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c6/5-eps-converted-to.pdf  used on input line 
+498.
+(pdftex.def)             Requested size: 355.51974pt x 204.94704pt.
+Package epstopdf Info: Source file: <Figures/c6/6.eps>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 35968 bytes
+(epstopdf)             Output file: <Figures/c6/6-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 20251 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c6/6-eps-converted
+-to.pdf Figures/c6/6.eps>
+(epstopdf)             \includegraphics on input line 511.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c6/6-eps-converted-to.pdf, id=586, 767.86874pt x 442.65375pt>
+File: Figures/c6/6-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c6/6-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c6/6-eps-converted-to.pdf  used on input line 
+511.
+(pdftex.def)             Requested size: 355.51974pt x 204.94704pt.
+Package epstopdf Info: Source file: <Figures/c6/int1.eps>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 23116 bytes
+(epstopdf)             Output file: <Figures/c6/int1-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:37
+(epstopdf)                    size: 16057 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c6/int1-eps-conver
+ted-to.pdf Figures/c6/int1.eps>
+(epstopdf)             \includegraphics on input line 518.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c6/int1-eps-converted-to.pdf, id=587, 767.86874pt x 442.65375pt>
+File: Figures/c6/int1-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c6/int1-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c6/int1-eps-converted-to.pdf  used on input li
+ne 518.
+(pdftex.def)             Requested size: 355.51974pt x 204.94704pt.
+Package epstopdf Info: Source file: <Figures/c6/7.eps>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 24478 bytes
+(epstopdf)             Output file: <Figures/c6/7-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-04-04 09:52:36
+(epstopdf)                    size: 17249 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figures/c6/7-eps-converted
+-to.pdf Figures/c6/7.eps>
+(epstopdf)             \includegraphics on input line 525.
+Package epstopdf Info: Output file is already uptodate.
+<Figures/c6/7-eps-converted-to.pdf, id=588, 767.86874pt x 442.65375pt>
+File: Figures/c6/7-eps-converted-to.pdf Graphic file (type pdf)
+<use Figures/c6/7-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/c6/7-eps-converted-to.pdf  used on input line 
+525.
+(pdftex.def)             Requested size: 355.51974pt x 204.94704pt.
+[107]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [108 <./Figures/c6/imp-eps-converted-to.pdf>] [109 <./Figures/c6/mrc-eps-conve
+rted-to.pdf> <./Figures/c6/rho6new-eps-converted-to.pdf>] [110 <./Figures/c6/5-
+eps-converted-to.pdf> <./Figures/c6/6-eps-converted-to.pdf>]) [111 <./Figures/c
+6/int1-eps-converted-to.pdf>] [112 <./Figures/c6/7-eps-converted-to.pdf>]
+\openout2 = `chapters/chapter7.aux'.
+
+
+(./chapters/chapter7.tex
+Chapter 7.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [113
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [114]
+Underfull \vbox (badness 6047) has occurred while \output is active []
+
+ [115])
+[116] (./report.bbl [117
+
+
+
+] [118] [119] [120] [121] [122] [123] [124] [125]
+[126]) [127]
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     246.
+
+ (./report.aux (./Initial_Pages/coverpage.aux)
+(./Initial_Pages/blankpage.aux) (./Initial_Pages/titlepage.aux)
+(./Initial_Pages/title_back.aux) (./Initial_Pages/certificate.aux)
+(./Initial_Pages/blankpage.aux) (./Initial_Pages/ackno.aux)
+(./Initial_Pages/abstract.aux) (./Initial_Pages/blankpage.aux)
+(./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter3.aux)
+(./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux)
+(./chapters/chapter7.aux))
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 11.12pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 20877 strings out of 478994
+ 415353 string characters out of 5862206
+ 744544 words of memory out of 5000000
+ 37824 multiletter control sequences out of 15000+600000
+ 419651 words of font info for 88 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 113i,25n,116p,1744b,517s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
+live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/2021/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/p
+ublic/amsfonts/cmextra/cmex8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
+.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/t
+exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/202
+1/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2021/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr6.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr8.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.p
+fb><c:/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/te
+xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2021
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2021/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2021/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2021/texmf-dist/fonts/type1/publ
+ic/cm-super/sfbx1200.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-supe
+r/sfrm1095.pfb><c:/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfrm1200
+.pfb>
+Output written on report.pdf (151 pages, 2031969 bytes).
+PDF statistics:
+ 809 PDF objects out of 1000 (max. 8388607)
+ 551 compressed objects within 6 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
+
